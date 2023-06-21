@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font: sans-serif;
+    background-image: url('../img/fundo-do-quadro-negro-com-pizza.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+#menu{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar{
+    padding: 0 !important;
+}
+.navbar-brand img{
+    height: 40px;
+    padding-left: 20px;
+}
+#menu{
+    background-color: black;
+}
+.navbar-nav li a{
+    color: #fff !important;
+    font-weight: 300;
+    float: right;
+    text-align: left;
+}
+.fa-bars{
+    color: rgb(255, 255, 255);
+    font-size: 30px !important;
+}
+.navbar-toggler{
+    outline: none !important;
+}
+
+/*-----------------------Banner-------------------------*/
+#banner{
+    padding-top: 22%;
+    color: #fff;
+}
+.titulo-promo{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+.bottom-img{
+    width: 100%;
+    margin-top: 8%;
+}
+/*--------------redes socias------------------*/
+.redesocial{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: 0px;
+}
+#redesocial2{
+    left:4%;
+}
+#redesocial3{
+    left:8%;
+}
+/*--------------------Sobre nos------------------------*/
+.title:before{
+    content: '';
+    background-color: #75542d;
+    height: 5px;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    transform: translateY(63px);
+}
+.title:after{
+    content: '';
+    background-color: #75542d;
+    height: 10px;
+    width: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 40px;
+    display: block;
+    transform: translateY(8px);
+}
+#about-us{
+    background-color: #ffffff;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.titulosobrenos{
+    font-size: 40px;
+    font-weight: 500;
+}
+#about-us ul li{
+    margin: 10px 0px;
+}
+#about-us img{
+    height: 400px;
+    margin-top: 50px;
+}
+/*--------------------depoimentos-----------------------*/
+#depoimentos{
+    background-color: #fff;
+    padding-top: 30px;
+}
+.depoimentos{
+    border-left: 4px solid #bb9463;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.depoimentos img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+.nome-usuario-depoimentos{
+    display: inline-block;
+    font-size: 12px;
+}
+/*---------------------FOOTER-----------------------*/
+.wave2{
+    width: 100%;
+}
+#footer{
+    background-image:linear-gradient(90deg ,#bb9463,#664f34);
+}
+#footer p{
+    margin-bottom: 1px;
+    text-align: justify;
+}
+#footer h1{
+    font-size: large;
+    text-align: center;
+}
+#footer .row{
+    margin: 0% !important;
+}
+.footer-img{
+    width: 100%;
+}
+.footer-box{
+    padding: 20px;
+}
+.footer-box img{
+    width: 120px;
+    margin-bottom: 20px;
+}
+.footer-box .fa{
+    margin-right: 8px;
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top: 7px;
+    border-radius: 2px;
+    background-image: linear-gradient(90deg ,#bb9463,#664f34);
+}
+
