@@ -1,0 +1,11 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "tailwindcss --input ./src/input.css --output ./dist/output.css --watch",
+    "build": "tailwindcss --input ./src/input.css --output ./dist/output.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
