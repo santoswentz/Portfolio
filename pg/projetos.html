@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eduardo Wentz | Projetos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#121212',
+                        darkgray: '#1E1E1E',
+                        midgray: '#252525',
+                        lightgray: '#333333',
+                        accent: '#3B82F6',
+                        accentHover: '#2563EB',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #f3f4f6;
+            scroll-behavior: smooth;
+        }
+        
+        .section-hidden {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s;
+        }
+        
+        .section-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #3B82F6, #60A5FA);
+            width: 0%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            transition: width 0.2s ease;
+        }
+        
+        .menu-item {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .menu-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #3B82F6;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .menu-item:hover::after {
+            transform: translateX(0);
+        }
+        
+        .floating { 
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translate(0,  0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+            border-color: #3B82F6;
+        }
+        
+        .project-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(30, 30, 30, 0.95);
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            max-height: 80%;
+            overflow-y: auto;
+        }
+        
+        .project-card:hover .project-info {
+            transform: translateY(0);
+        }
+        
+        .modal {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: scale(0.9);
+        }
+        
+        .modal-visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .filter-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active {
+            background-color: #3B82F6;
+            color: white;
+        }
+        
+        .pixel-border {
+            border: 4px solid #3B82F6;
+            border-image: 
+                linear-gradient(
+                    45deg,
+                    #3B82F6, 
+                    #60A5FA, 
+                    #93C5FD,
+                    #60A5FA,
+                    #3B82F6
+                ) 1;
+        }
+        
+        /* Estilizando a barra de rolagem */
+        .project-info::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .project-info::-webkit-scrollbar-track {
+            background: #1E1E1E;
+        }
+        
+        .project-info::-webkit-scrollbar-thumb {
+            background: #3B82F6;
+            border-radius: 3px;
+        }
+        
+        .project-info::-webkit-scrollbar-thumb:hover {
+            background: #2563EB;
+        }
+        
+        .search-box {
+            transition: all 0.3s ease;
+        }
+        
+        .search-box:focus {
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-dark min-h-screen">
+    <!-- Barra de progresso -->
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <!-- Menu de Navegação -->
+    <nav class="fixed w-full z-50 bg-darkgray bg-opacity-90 backdrop-blur-sm py-4 px-6 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-accent pixel-border px-3 py-1">EW.dev</a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="menu-item text-gray-300 hover:text-white font-medium">Início</a>
+                <a href="../index.html#sobre" class="menu-item text-gray-300 hover:text-white font-medium">Sobre</a>
+                <a href="index.html#habilidades" class="menu-item text-gray-300 hover:text-white font-medium">Habilidades</a>
+                <a href="index.html#experiencia" class="menu-item text-gray-300 hover:text-white font-medium">Experiência</a>
+                <a href="projetos.html" class="menu-item text-accent hover:text-white font-medium">Projetos</a>
+                <a href="certificados.html" class="menu-item text-gray-300 hover:text-white font-medium">Certificados</a>
+                <a href="../index.html" class="menu-item text-gray-300 hover:text-white font-medium">Contato</a>
+            </div>
+            
+            <div class="flex items-center">
+                <div class="bg-lightgray rounded-full px-3 py-1 text-sm mr-4">
+                    <span class="text-accent">Projetos:</span> 
+                    <span id="project-count">0</span> 
+                    <i class="fas fa-code-branch text-purple-400 ml-1"></i>
+                </div>
+                
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-midgray mt-4 py-4 rounded-lg shadow-xl">
+            <div class="flex flex-col space-y-3 px-6">
+                <a href="index.html" class="menu-item text-gray-300 hover:text-white font-medium">Início</a>
+                <a href="index.html#sobre" class="menu-item text-gray-300 hover:text-white font-medium">Sobre</a>
+                <a href="index.html#habilidades" class="menu-item text-gray-300 hover:text-white font-medium">Habilidades</a>
+                <a href="index.html#experiencia" class="menu-item text-gray-300 hover:text-white font-medium">Experiência</a>
+                <a href="projetos.html" class="menu-item text-accent hover:text-white font-medium">Projetos</a>
+                <a href="certificados.html" class="menu-item text-gray-300 hover:text-white font-medium">Certificados</a>
+                <a href="index.html#contato" class="menu-item text-gray-300 hover:text-white font-medium">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero Projetos -->
+    <section class="min-h-[30vh] flex items-center justify-center pt-28 pb-8 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Meus <span class="text-accent">Projetos</span></h1>
+            <p class="text-gray-400 max-w-2xl mx-auto">
+                Aqui estão alguns dos projetos que desenvolvi ao longo da minha jornada como desenvolvedor.
+            </p>
+             
+        </div>
+    </section>
+
+    <!-- Seção Pesquisa -->
+    <section class="py-6 px-4 bg-darkgray">
+        <div class="container mx-auto">
+            <div class="max-w-2xl mx-auto">
+                <div class="relative">
+                    <input type="text" id="search-input" placeholder="Pesquisar projetos por nome, tecnologia..." class="w-full bg-midgray text-gray-300 rounded-lg p-4 pl-12 border border-lightgray focus:border-accent focus:outline-none search-box">
+                    <div class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-6 flex flex-wrap justify-center gap-4">
+                <button class="filter-btn bg-midgray hover:bg-lightgray text-gray-300 px-4 py-2 rounded-lg active" data-filter="all">
+                    Todos
+                </button>
+                <button class="filter-btn bg-midgray hover:bg-lightgray text-gray-300 px-4 py-2 rounded-lg" data-filter="web">
+                    Web
+                </button>
+                <button class="filter-btn bg-midgray hover:bg-lightgray text-gray-300 px-4 py-2 rounded-lg" data-filter="mobile">
+                    Mobile
+                </button>
+                <button class="filter-btn bg-midgray hover:bg-lightgray text-gray-300 px-4 py-2 rounded-lg" data-filter="fullstack">
+                    Fullstack
+                </button>
+                <button class="filter-btn bg-midgray hover:bg-lightgray text-gray-300 px-4 py-2 rounded-lg" data-filter="javascript">
+                    JavaScript
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section class="py-16 px-4">
+        <div class="container mx-auto">
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Os projetos serão carregados aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-8 px-4 mt-12">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="mailto:wentz.dev@gmail.com" class="text-gray-400 hover:text-accent transition">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/santoswentz" class="text-gray-400 hover:text-accent transition">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-accent transition">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+            </div>
+            
+            <p class="text-gray-500">© 2023 Eduardo Wentz. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dados dos projetos
+        const projects = [
+            {
+                id: 1,
+                title: "E-commerce Fullstack",
+                description: "Plataforma de e-commerce completa com painel administrativo, sistema de pagamentos e gestão de estoque.",
+                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=E-commerce+Fullstack",
+                technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+                tags: ["web", "fullstack", "javascript"],
+                projectLink: "#",
+                githubLink: "#",
+                observations: [
+                    {
+                        text: "Implementei um sistema de cache que melhorou o desempenho em 40%.",
+                        date: "2023-05-15"
+                    },
+                    {
+                        text: "Integração com API de pagamentos foi desafiadora mas resultou em uma experiência de usuário excelente.",
+                        date: "2023-04-22"
+                    }
+                ]
+            },
+            {
+                id: 2,
+                title: "App de Gestão Financeira",
+                description: "Aplicativo mobile para controle de finanças pessoais com gráficos e relatórios detalhados.",
+                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=App+Finanças",
+                technologies: ["React Native", "Firebase", "Chart.js"],
+                tags: ["mobile", "javascript"],
+                projectLink: "#",
+                githubLink: "#",
+                observations: [
+                    {
+                        text: "O uso de gráficos interativos melhorou significativamente a experiência do usuário.",
+                        date: "2023-03-10"
+                    }
+                ]
+            },
+            {
+                id: 3,
+                title: "Sistema de Agendamentos",
+                description: "Sistema web para agendamento de serviços com confirmação por e-mail e notificações.",
+                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=Sistema+Agendamentos",
+                technologies: ["Vue.js", "Laravel", "MySQL"],
+                tags: ["web", "fullstack"],
+                projectLink: "#",
+                githubLink: "#",
+                observations: [
+                    {
+                        text: "Sistema de notificações em tempo real aumentou a taxa de comparecimento em 25%.",
+                        date: "2023-02-18"
+                    }
+                ]
+            },
+            {
+                id: 4,
+                title: "Dashboard Analytics",
+                description: "Painel de analytics com visualização de dados em tempo real e relatórios personalizáveis.",
+                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=Dashboard+Analytics",
+                technologies: ["React", "Tailwind CSS", "D3.js", "Express"],
+                tags: ["web", "javascript"],
+                projectLink: "#",
+                githubLink: "#",
+                observations: [
+                    {
+                        text: "Implementação de gráficos complexos com D3.js foi um grande aprendizado.",
+                        date: "2023-01-05"
+                    }
+                ]
+            },
+            {
+                id: 5,
+                title: "Rede Social para Developers",
+                description: "Plataforma de networking para desenvolvedores com portfólio integrado e fórum de discussão.",
+                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=Rede+Social+Devs",
+                technologies: ["Angular", "NestJS", "PostgreSQL", "AWS"],
+                tags: ["web", "fullstack"],
+                projectLink: "#",
+                githubLink: "#",
+                observations: [
+                    {
+                        text: "A arquitetura em microserviços permitiu escalar a aplicação facilmente.",
+                        date: "2022-12-12"
+                    }
+                ]
+            },
+            {
+                id: 6,
+                title: "App de Entrega de Comida",
+                description: "Aplicativo de delivery com acompanhamento em tempo real e integração com Google Maps.",
+                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=App+Delivery",
+                technologies: ["Flutter", "Node.js", "MongoDB", "Google Maps API"],
+                tags: ["mobile", "fullstack"],
+                projectLink: "#",
+                githubLink: "#",
+                observations: [
+                    {
+                        text: "Integração com API do Google Maps foi crucial para o sucesso do aplicativo.",
+                        date: "2022-11-20"
+                    }
+                ]
+            }
+        ];
+
+        // Função para renderizar os projetos
+        function renderProjects(filter = 'all', searchTerm = '') {
+            const container = document.getElementById('projects-container');
+            container.innerHTML = '';
+            
+            let filteredProjects = filter === 'all' 
+                ? projects 
+                : projects.filter(project => project.tags.includes(filter));
+            
+            // Aplicar pesquisa se houver termo
+            if (searchTerm) {
+                const term = searchTerm.toLowerCase();
+                filteredProjects = filteredProjects.filter(project => 
+                    project.title.toLowerCase().includes(term) ||
+                    project.description.toLowerCase().includes(term) ||
+                    project.technologies.some(tech => tech.toLowerCase().includes(term)) ||
+                    project.tags.some(tag => tag.toLowerCase().includes(term))
+                );
+            }
+            
+            // Atualizar contador
+            document.getElementById('project-count').textContent = filteredProjects.length;
+            
+            if (filteredProjects.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-10">
+                        <i class="fas fa-search text-4xl text-gray-600 mb-4"></i>
+                        <p class="text-gray-400">Nenhum projeto encontrado.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            filteredProjects.forEach(project => {
+                const card = document.createElement('div');
+                card.className = 'project-card bg-darkgray rounded-xl overflow-hidden cursor-pointer';
+                card.innerHTML = `
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2 flex flex-wrap gap-1">
+                            ${project.tags.map(tag => `<span class="bg-accent text-white text-xs px-2 py-1 rounded">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2">${project.title}</h3>
+                        <p class="text-gray-400 line-clamp-2">${project.description}</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            ${project.technologies.map(tech => `<span class="bg-lightgray text-gray-300 text-xs px-2 py-1 rounded">${tech}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h4 class="text-lg font-bold text-white mb-2">Observações</h4>
+                        <div id="observations-${project.id}" class="text-gray-300 space-y-2">
+                            ${project.observations.length > 0 
+                                ? project.observations.map(obs => `
+                                    <div class="bg-midgray p-3 rounded-lg">
+                                        <p class="text-sm">${obs.text}</p>
+                                        <p class="text-xs text-gray-500 mt-1">${new Date(obs.date).toLocaleDateString('pt-BR')}</p>
+                                    </div>
+                                `).join('') 
+                                : '<p class="text-gray-500 italic">Nenhuma observação ainda.</p>'
+                            }
+                        </div>
+                        <div class="mt-4 flex justify-between">
+                            <a href="${project.githubLink}" target="_blank" class="text-gray-400 hover:text-white">
+                                <i class="fab fa-github mr-1"></i> Código
+                            </a>
+                            <a href="${project.projectLink}" target="_blank" class="text-accent hover:text-white">
+                                <i class="fas fa-external-link-alt mr-1"></i> Ver Projeto
+                            </a>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+        }
+
+        // Inicialização quando o DOM estiver carregado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Renderizar projetos inicialmente
+            renderProjects();
+            
+            // Configurar filtros
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Atualizar botão ativo
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Aplicar filtro e pesquisa
+                    const searchTerm = document.getElementById('search-input').value;
+                    renderProjects(filter, searchTerm);
+                });
+            });
+            
+            // Configurar pesquisa
+            document.getElementById('search-input').addEventListener('input', function() {
+                const searchTerm = this.value;
+                const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+                renderProjects(activeFilter, searchTerm);
+            });
+            
+            // Menu mobile
+            document.getElementById('mobile-menu-button').addEventListener('click', () => {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            });
+            
+            // Barra de progresso
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.getElementById('progress-bar').style.width = scrolled + '%';
+            });
+        });
+    </script>
+</body>
+</html>
