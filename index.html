@@ -1,622 +1,631 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo Wentz | Portfolio Gameficado</title>
+    <title>Eduardo Wentz | Full-Stack Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#121212',
+                        darkgray: '#1E1E1E',
+                        midgray: '#252525',
+                        lightgray: '#333333',
+                        accent: '#3B82F6',
+                        accentHover: '#2563EB',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        :root {
-            --primary: #0f0f0f;
-            --secondary: #1a1a1a;
-            --accent: #3a3a3a;
-            --text: #e0e0e0;
-            --highlight: #3b82f6;
-            --success: #10b981;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        html {
+            scroll-behavior: smooth;
         }
-        
+
         body {
-            font-family: 'Roboto Mono', monospace;
-            background-color: var(--primary);
-            color: var(--text);
-            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+            background-color: #121212;
+            color: #f3f4f6; 
         }
         
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Orbitron', sans-serif;
-        }
-        
-        /* Animações */
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-            100% { transform: translate(0); }
-        }
-        
-        @keyframes flicker {
-            0% { opacity: 1; }
-            50% { opacity: 0.7; }
-            100% { opacity: 1; }
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
-        }
-        
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-        
-        @keyframes blink {
-            50% { border-color: transparent; }
-        }
-        
-        /* Efeitos e utilitários */
-        .glitch-effect {
-            animation: glitch 0.5s infinite;
-        }
-        
-        .flicker {
-            animation: flicker 2s infinite;
-        }
-        
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-        
-        .float {
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .typing-animation {
-            overflow: hidden;
-            border-right: 2px solid var(--highlight);
-            white-space: nowrap;
-            animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
-        }
-        
-        .scan-line {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .scan-line::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(to bottom, transparent, var(--highlight), transparent);
-            animation: scan 3s linear infinite;
-        }
-        
-        @keyframes scan {
-            0% { top: -5px; }
-            100% { top: 100%; }
-        }
-        
-        .pixel-border {
-            border: 2px solid var(--text);
-            box-shadow: 4px 4px 0px var(--accent);
-        }
-        
-        .pixel-button {
-            transition: all 0.2s;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .pixel-button:active {
-            transform: translate(4px, 4px);
-            box-shadow: 0px 0px 0px var(--accent);
-        }
-        
-        .pixel-button::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: 0.5s;
-        }
-        
-        .pixel-button:hover::after {
-            left: 100%;
-        }
-        
-        .terminal-window {
-            background-color: rgba(0, 0, 0, 0.8);
-            border: 1px solid var(--highlight);
-            border-radius: 5px;
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
-        }
-        
-        .terminal-header {
-            background-color: var(--secondary);
-            padding: 5px 10px;
-            border-bottom: 1px solid var(--highlight);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .terminal-body {
-            padding: 15px;
-            font-family: 'Roboto Mono', monospace;
-        }
-        
-        .code-line {
-            margin-bottom: 5px;
-            display: block;
-        }
-        
-        .comment { color: #6a9955; }
-        .keyword { color: #c586c0; }
-        .function { color: #dcdcaa; }
-        .string { color: #ce9178; }
-        .number { color: #b5cea8; }
-        
-        /* Transições entre páginas */
-        .page {
-            display: none;
+        .section-hidden {
             opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+            transform: translateY(50px);
+            transition: all 1s;
         }
         
-        .page.active {
-            display: block;
+        .section-visible {
             opacity: 1;
+            transform: translateY(0);
         }
         
-        /* Modal */
-        .modal {
-            display: none;
+        .progress-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #3B82F6, #60A5FA);
+            width: 0%;
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
+            z-index: 100;
+            transition: width 0.2s ease;
         }
         
-        .modal.active {
-            display: flex;
-            opacity: 1;
-        }
-        
-        .modal-content {
-            background-color: var(--secondary);
-            border: 2px solid var(--highlight);
-            border-radius: 5px;
-            max-width: 600px;
-            width: 90%;
-            padding: 20px;
-            position: relative;
-            transform: scale(0.9);
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .modal.active .modal-content {
-            transform: scale(1);
-        }
-        
-        .close-modal {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            color: var(--text);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Progress bars estilo game */
-        .skill-bar {
-            height: 20px;
-            background-color: var(--accent);
-            border-radius: 0;
+        .menu-item {
             position: relative;
             overflow: hidden;
         }
         
-        .skill-level {
-            height: 100%;
-            background: linear-gradient(90deg, var(--highlight), #60a5fa);
-            position: relative;
-        }
-        
-        .skill-level::after {
+        .menu-item::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
             bottom: 0;
-            right: 0;
-            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-            background-size: 20px 20px;
-            animation: skill-animation 1s linear infinite;
+            left: 0;
+            width: 97%;
+            height: 2px;
+            background-color: #3B82F6;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
         }
         
-        @keyframes skill-animation {
-            0% { background-position: 0 0; }
-            100% { background-position: 20px 0; }
+        .menu-item:hover::after {
+            transform: translateX(0);
+        }
+        
+        .skill-bar {
+            transition: width 2s ease-in-out;
+        }
+        
+        .floating { 
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translate(0,  0px); }
+            50% { transform: translate(0, 15px); }
+            100% { transform: translate(0, -0px); }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #3B82F6;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #3B82F6 }
+        }
+        
+        .achievement-badge {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .achievement-badge:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+        
+        .pixel-border {
+            border: 4px solid #3B82F6;
+            border-image: 
+                linear-gradient(
+                    45deg,
+                    #3B82F6, 
+                    #60A5FA, 
+                    #93C5FD,
+                    #60A5FA,
+                    #3B82F6
+                ) 1;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-200 min-h-screen">
-    <!-- Navegação estilo terminal -->
-    <nav class="fixed top-0 w-full bg-black bg-opacity-90 z-50 pixel-border">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="text-xl font-bold flicker" style="font-family: 'Orbitron', sans-serif;">
-                <span class="text-blue-400">EDUARDO</span><span class="text-gray-400">::</span><span class="text-blue-500">WENTZ</span>
+<body class="bg-dark min-h-screen">
+    <!-- Barra de progresso -->
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <!-- Menu de Navegação Gamificado -->
+    <nav class="fixed w-full z-50 bg-darkgray bg-opacity-90 backdrop-blur-sm py-4 px-6 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-accent pixel-border px-3 py-1">EW.dev</a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="menu-item text-gray-300 hover:text-white font-medium">Início</a>
+                <a href="#sobre" class="menu-item text-gray-300 hover:text-white font-medium">Sobre</a>
+                <a href="#habilidades" class="menu-item text-gray-300 hover:text-white font-medium">Habilidades</a>
+                <a href="#experiencia" class="menu-item text-gray-300 hover:text-white font-medium">Experiência</a>
+                <a href="#contato" class="menu-item text-gray-300 hover:text-white font-medium">Contato</a>
             </div>
-            <div class="flex space-x-2">
-                <button class="pixel-button bg-gray-800 text-white px-4 py-2 pixel-border" onclick="changePage('home')">
-                    <i class="fas fa-home mr-2"></i>Home
+            
+            <div class="flex items-center">
+                <div class="bg-lightgray rounded-full px-3 py-1 text-sm mr-4">
+                    <span class="text-accent">Nível:</span> 
+                    <span id="nivel">15</span> 
+                    <i class="fas fa-star text-yellow-400 ml-1"></i>
+                </div>
+                
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white">
+                    <i class="fas fa-bars text-xl"></i>
                 </button>
-                <button class="pixel-button bg-gray-800 text-white px-4 py-2 pixel-border" onclick="changePage('skills')">
-                    <i class="fas fa-cogs mr-2"></i>Skills
-                </button>
-                <button class="pixel-button bg-gray-800 text-white px-4 py-2 pixel-border" onclick="changePage('projects')">
-                    <i class="fas fa-code mr-2"></i>Projetos
-                </button>
-                <button class="pixel-button bg-gray-800 text-white px-4 py-2 pixel-border" onclick="showModal('contactModal')">
-                    <i class="fas fa-envelope mr-2"></i>Contato
-                </button>
+            </div>
+        </div>
+        
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-midgray mt-4 py-4 rounded-lg shadow-xl">
+            <div class="flex flex-col space-y-3 px-6">
+                <a href="#inicio" class="menu-item text-gray-300 hover:text-white font-medium">Início</a>
+                <a href="#sobre" class="menu-item text-gray-300 hover:text-white font-medium">Sobre</a>
+                <a href="#habilidades" class="menu-item text-gray-300 hover:text-white font-medium">Habilidades</a>
+                <a href="#experiencia" class="menu-item text-gray-300 hover:text-white font-medium">Experiência</a>
+                <a href="#contato" class="menu-item text-gray-300 hover:text-white font-medium">Contato</a>
             </div>
         </div>
     </nav>
 
-    <!-- Página Inicial -->
-    <section id="home" class="page active min-h-screen flex items-center justify-center pt-16">
-        <div class="container mx-auto px-4 py-20 text-center">
-            <div class="terminal-window mx-auto max-w-3xl scan-line">
-                <div class="terminal-header">
-                    <div class="flex">
-                        <div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
-                        <div class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></div>
-                        <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-                    </div>
-                    <div class="text-sm">terminal@portfolio:~</div>
-                    <div></div>
+    <!-- Seção Hero -->
+    <section id="inicio" class="min-h-screen flex items-center justify-center pt-20 pb-16 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Eduardo <span class="text-accent">Wentz</span></h1>
+                <div class="typewriter text-xl md:text-2xl text-gray-300 mb-6">
+                    Desenvolvedor Full-Stack
                 </div>
-                <div class="terminal-body">
-                    <span class="code-line comment"># Iniciando sistema...</span>
-                    <span class="code-line comment"># Carregando perfil profissional</span>
-                    <span class="code-line"><span class="keyword">const</span> <span class="function">developer</span> = {</span>
-                    <span class="code-line">&nbsp;&nbsp;name: <span class="string">"Eduardo Wentz"</span>,</span>
-                    <span class="code-line">&nbsp;&nbsp;title: <span class="string">"Desenvolvedor Full Stack"</span>,</span>
-                    <span class="code-line">&nbsp;&nbsp;location: <span class="string">"Caxias do Sul, RS"</span>,</span>
-                    <span class="code-line">&nbsp;&nbsp;skills: [<span class="string">"JavaScript"</span>, <span class="string">"PHP"</span>, <span class="string">"Laravel"</span>, <span class="string">"React Native"</span>],</span>
-                    <span class="code-line">&nbsp;&nbsp;experience: <span class="number">2</span>+</span>
-                    <span class="code-line">};</span>
-                    <span class="code-line comment mt-4"># Digite <span class="keyword">help</span> para ver os comandos disponíveis</span>
-                    <div class="mt-6 flex items-center">
-                        <span class="text-green-400 mr-2">→</span>
-                        <div class="typing-animation w-0">Bem-vindo ao meu portfolio interativo!</div>
+                <p class="text-gray-400 mb-8 max-w-md mx-auto md:mx-0">
+                    Construindo soluções digitais com foco em otimização, UX e UI. 
+                    Atualmente cursando Engenharia de Software e trabalhando com desenvolvimento Front-end.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contato" class="bg-accent hover:bg-accentHover text-white font-medium py-3 px-6 rounded-lg transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-envelope mr-2"></i> Entrar em Contato
+                    </a>
+                    <a href="#projetos" class="bg-lightgray hover:bg-midgray text-white font-medium py-3 px-6 rounded-lg transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-code mr-2"></i> Ver Projetos
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80">
+                    <div class="absolute inset-0 bg-accent rounded-full opacity-20 floating"></div>
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent to-transparent rounded-full opacity-30 floating" style="animation-delay: 1s;"></div>
+                    <div class="absolute inset-4 bg-darkgray rounded-full flex items-center justify-center floating" style="animation-delay: 2s;">
+                        <div class="text-6xl text-accent">
+                            <i class="fas fa-code"></i>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+            <a href="#sobre" class="text-gray-400 hover:text-white animate-bounce">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
 
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <div class="bg-gray-800 p-6 pixel-border float">
-                    <div class="text-4xl text-blue-400 mb-4"><i class="fas fa-laptop-code"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Desenvolvimento Web</h3>
-                    <p class="text-gray-400">Sites responsivos e aplicações web modernas com foco em performance.</p>
+    <!-- Seção Sobre -->
+    <section id="sobre" class="py-20 px-4 bg-darkgray section-hidden">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+                <span class="text-accent">#</span> Sobre Mim
+            </h2>
+            
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2">
+                    <div class="bg-midgray p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">Minha Jornada</h3>
+                        <p class="text-gray-300 mb-6">
+                            Sou um desenvolvedor web com experiência em construir soluções digitais com foco em 
+                            otimização, UX e UI. Atualmente, curso Engenharia de Software na FSG.
+                        </p>
+                        <p class="text-gray-300 mb-6">
+                            Possuo certificações técnicas do Senac RS em Desenvolvimento Web e de Aplicativos Mobile, 
+                            com experiência prática em diversas tecnologias modernas.
+                        </p>
+                        <p class="text-gray-300">
+                            Atualmente trabalho como desenvolvedor Front-end, mas almejo migrar para o Back-end, 
+                            onde posso aplicar meus conhecimentos em Laravel, APIs RESTful e bancos de dados.
+                        </p>
+                    </div>
                 </div>
                 
-                <div class="bg-gray-800 p-6 pixel-border float" style="animation-delay: 0.5s;">
-                    <div class="text-4xl text-green-400 mb-4"><i class="fas fa-mobile-alt"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Apps Mobile</h3>
-                    <p class="text-gray-400">Desenvolvimento de aplicativos nativos e híbridos com React Native.</p>
+                <div class="md:w-1/2">
+                    <div class="bg-midgray p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-4">Conquistas</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="achievement-badge bg-lightgray p-4 rounded-lg flex flex-col items-center">
+                                <div class="text-accent text-3xl mb-2">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <p class="text-center text-sm">Formação Técnica</p>
+                            </div>
+                            <a href="#experiencia"> 
+                                <div class="achievement-badge bg-lightgray p-4 rounded-lg flex flex-col items-center">
+                                    <div class="text-accent text-3xl mb-2">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <p class="text-center text-sm">Experiência Profissional</p>
+                                </div>
+                           </a>
+                            <div class="achievement-badge bg-lightgray p-4 rounded-lg flex flex-col items-center">
+                                <div class="text-accent text-3xl mb-2">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <p class="text-center text-sm">Projetos Concluídos</p>
+                            </div>
+                            
+                            <div class="achievement-badge bg-lightgray p-4 rounded-lg flex flex-col items-center">
+                                <div class="text-accent text-3xl mb-2">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <p class="text-center text-sm">Certificações e Certificados</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="bg-gray-800 p-6 pixel-border float" style="animation-delay: 1s;">
-                    <div class="text-4xl text-purple-400 mb-4"><i class="fas fa-server"></i></div>
-                    <h3 class="text-xl font-bold mb-2">Back-end</h3>
-                    <p class="text-gray-400">APIs RESTful e sistemas server-side com Laravel e Node.js.</p>
-                </div>
-            </div>
-
-            <div class="mt-12">
-                <button class="pixel-button bg-blue-600 text-white px-8 py-4 text-lg pixel-border pulse" onclick="changePage('skills')">
-                    Explorar Habilidades <i class="fas fa-arrow-right ml-2"></i>
-                </button>
             </div>
         </div>
     </section>
 
-    <!-- Página de Skills -->
-    <section id="skills" class="page min-h-screen pt-20">
-        <div class="container mx-auto px-4 py-12">
-            <h2 class="text-3xl font-bold text-center mb-16 glitch-effect">HABILIDADES TÉCNICAS</h2>
+    <!-- Seção Habilidades -->
+    <section id="habilidades" class="py-20 px-4 bg-dark section-hidden">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+                <span class="text-accent">#</span> Habilidades
+            </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                <div>
-                    <h3 class="text-xl font-bold mb-6 text-blue-400"><i class="fas fa-code mr-2"></i>Front-end</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Frontend -->
+                <div class="bg-darkgray p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-accent flex items-center">
+                        <i class="fas fa-paint-brush mr-2"></i> Front-end
+                    </h3>
                     
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span>HTML/CSS</span>
-                            <span>95%</span>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>HTML/CSS</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-lightgray rounded-full h-2.5">
+                                <div class="skill-bar bg-accent h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 95%"></div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>JavaScript</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-lightgray rounded-full h-2.5">
+                                <div class="skill-bar bg-accent h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span>JavaScript</span>
-                            <span>90%</span>
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>React </span>
+                                <span>60%</span>
+                            </div>
+                            <div class="w-full bg-lightgray rounded-full h-2.5">
+                                <div class="skill-bar bg-accent h-2.5 rounded-full" style="width: 60%"></div>
+                            </div>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span>React</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span>Tailwind CSS</span>
-                            <span>92%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 92%"></div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Tailwind CSS</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full bg-lightgray rounded-full h-2.5">
+                                <div class="skill-bar bg-accent h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <div>
-                    <h3 class="text-xl font-bold mb-6 text-green-400"><i class="fas fa-server mr-2"></i>Back-end</h3>
+                <!-- Backend -->
+                <div class="bg-darkgray p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-4 text-accent flex items-center">
+                        <i class="fas fa-server mr-2"></i> Back-end
+                    </h3>
                     
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span>PHP/Laravel</span>
-                            <span>88%</span>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>PHP/Laravel</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="w-full bg-lightgray rounded-full h-2.5">
+                                <div class="skill-bar bg-accent h-2.5 rounded-full" style="width: 88%"></div>
+                            </div>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 88%"></div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Python/Flask</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-lightgray rounded-full h-2.5">
+                                <div class="skill-bar bg-accent h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span>Node.js</span>
-                            <span>80%</span>
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>API RESTful</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-lightgray rounded-full h-2.5">
+                                <div class="skill-bar bg-accent h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
                         </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span>API REST</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span>MySQL/SQLite</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 85%"></div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>MySQL/SQLite</span>
+                                <span>82%</span>
+                            </div>
+                            <div class="w-full bg-lightgray rounded-full h-2.5">
+                                <div class="skill-bar bg-accent h-2.5 rounded-full" style="width: 82%"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="mt-16 text-center">
-                <button class="pixel-button bg-gray-800 text-white px-6 py-3 pixel-border mr-4" onclick="changePage('home')">
-                    <i class="fas fa-arrow-left mr-2"></i>Voltar
-                </button>
-                <button class="pixel-button bg-blue-600 text-white px-6 py-3 pixel-border" onclick="changePage('projects')">
-                    Ver Projetos <i class="fas fa-arrow-right ml-2"></i>
-                </button>
             </div>
         </div>
     </section>
 
-    <!-- Página de Projetos -->
-    <section id="projects" class="page min-h-screen pt-20">
-        <div class="container mx-auto px-4 py-12">
-            <h2 class="text-3xl font-bold text-center mb-16 glitch-effect">MEUS PROJETOS</h2>
+    <!-- Seção Experiência -->
+    <section id="experiencia" class="py-20 px-4 bg-darkgray section-hidden">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+                <span class="text-accent">#</span> Experiência
+            </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-gray-800 pixel-border overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-r from-blue-900 to-gray-900 flex items-center justify-center">
-                        <i class="fas fa-shopping-cart text-6xl text-blue-400"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">E-commerce Platform</h3>
-                        <p class="text-gray-400 mb-4">Plataforma completa de e-commerce com carrinho e integração de pagamento.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-900 text-blue-300 text-xs px-2 py-1">React</span>
-                            <span class="bg-green-900 text-green-300 text-xs px-2 py-1">Node.js</span>
-                            <span class="bg-purple-900 text-purple-300 text-xs px-2 py-1">MongoDB</span>
+            <div class="relative">
+                <!-- Linha do tempo -->
+                <div class="absolute left-0 md:left-1/2 top-0 h-full w-1 bg-accent transform -translate-x-1/2"></div>
+                
+                <!-- Experiência 1 -->
+                <div class="mb-8 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2"></div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <div class="bg-midgray p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-accent">Goappy</h3>
+                            <p class="text-gray-300">Desenvolvedor web front end</p>
+                            <p class="text-gray-400 text-sm">julho de 2025 - Present (3 meses)</p>
+                            <p class="text-gray-400 text-sm">Caxias do Sul, Rio Grande do Sul, Brasil</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="bg-gray-800 pixel-border overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-r from-green-900 to-gray-900 flex items-center justify-center">
-                        <i class="fas fa-tasks text-6xl text-green-400"></i>
+                
+                <!-- Experiência 2 -->
+                <div class="mb-8 flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-8 md:text-right">
+                        <div class="bg-midgray p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-accent">Câmara De Vereadores</h3>
+                            <p class="text-gray-300">Assistente de TI</p>
+                            <p class="text-gray-400 text-sm">junho de 2024 - setembro de 2024 (4 meses)</p>
+                            <p class="text-gray-400 text-sm">Caxias do Sul, Rio Grande do Sul, Brasil</p>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Task Management App</h3>
-                        <p class="text-gray-400 mb-4">Aplicativo de gestão de tarefas com drag-and-drop e categorização.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-900 text-blue-300 text-xs px-2 py-1">React Native</span>
-                            <span class="bg-red-900 text-red-300 text-xs px-2 py-1">Firebase</span>
+                    <div class="md:w-1/2"></div>
+                </div>
+                
+                <!-- Experiência 3 -->
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2"></div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <div class="bg-midgray p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold text-accent">Decathlon</h3>
+                            <p class="text-gray-300">Vendedor</p>
+                            <p class="text-gray-400 text-sm">agosto de 2023 - fevereiro de 2024 (7 meses)</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="bg-gray-800 pixel-border overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-r from-purple-900 to-gray-900 flex items-center justify-center">
-                        <i class="fas fa-chart-line text-6xl text-purple-400"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Analytics Dashboard</h3>
-                        <p class="text-gray-400 mb-4">Dashboard de analytics com gráficos interativos e visualização de dados.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-green-900 text-green-300 text-xs px-2 py-1">Vue.js</span>
-                            <span class="bg-yellow-900 text-yellow-300 text-xs px-2 py-1">D3.js</span>
-                            <span class="bg-indigo-900 text-indigo-300 text-xs px-2 py-1">Express</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="mt-16 text-center">
-                <button class="pixel-button bg-gray-800 text-white px-6 py-3 pixel-border mr-4" onclick="changePage('skills')">
-                    <i class="fas fa-arrow-left mr-2"></i>Habilidades
-                </button>
-                <button class="pixel-button bg-blue-600 text-white px-6 py-3 pixel-border" onclick="showModal('contactModal')">
-                    Entrar em Contato <i class="fas fa-envelope ml-2"></i>
-                </button>
             </div>
         </div>
     </section>
 
-    <!-- Modal de Contato -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="hideModal('contactModal')">&times;</button>
-            <h2 class="text-2xl font-bold mb-6 text-blue-400">ENTRAR EM CONTATO</h2>
+    <!-- Seção Formação -->
+    <section id="formacao" class="py-20 px-4 bg-dark section-hidden">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+                <span class="text-accent">#</span> Formação
+            </h2>
             
-            <form class="space-y-6">
-                <div>
-                    <label for="name" class="block mb-2">Nome</label>
-                    <input type="text" id="name" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-blue-500">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-darkgray p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-accent">FSG - Centro Universitário da Serra Gaúcha</h3>
+                    <p class="text-gray-300">Ensino Superior, Engenharia de Software</p>
+                    <p class="text-gray-400 text-sm">junho de 2025 - junho de 2029</p>
                 </div>
                 
-                <div>
-                    <label for="email" class="block mb-2">Email</label>
-                    <input type="email" id="email" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-blue-500">
+                <div class="bg-darkgray p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-accent">Senac RS</h3>
+                    <p class="text-gray-300">Ensino Médio Profissionalizante (Pós-médio), Tecnologia da Informação</p>
+                    <p class="text-gray-400 text-sm">2022 - 2025</p>
                 </div>
-                
-                <div>
-                    <label for="message" class="block mb-2">Mensagem</label>
-                    <textarea id="message" rows="4" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-blue-500"></textarea>
-                </div>
-                
-                <button type="submit" class="pixel-button bg-blue-600 text-white px-6 py-3 w-full pixel-border">
-                    Enviar Mensagem <i class="fas fa-paper-plane ml-2"></i>
-                </button>
-            </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="py-20 px-4 bg-darkgray section-hidden">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+                <span class="text-accent">#</span> Contato
+            </h2>
             
-            <div class="mt-8 pt-6 border-t border-gray-700">
-                <h3 class="text-lg font-bold mb-4">Outras formas de contato:</h3>
-                <div class="flex flex-col space-y-3">
-                    <div class="flex items-center">
-                        <i class="fas fa-envelope text-blue-400 mr-3"></i>
-                        <span>wentz.dev@gmail.com</span>
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="md:w-1/2">
+                    <div class="bg-midgray p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Vamos conversar!</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="bg-lightgray p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-accent"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">Email</p>
+                                    <p class="text-white">wentz.dev@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="bg-lightgray p-3 rounded-full mr-4">
+                                    <i class="fab fa-linkedin-in text-accent"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">LinkedIn</p>
+                                    <a href="https://www.linkedin.com/in/santoswentz" class="text-white hover:text-accent transition">linkedin.com/in/santoswentz</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="bg-lightgray p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-accent"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400">Localização</p>
+                                    <p class="text-white">Caxias do Sul, Rio Grande do Sul, Brasil</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex items-center">
-                        <i class="fab fa-linkedin text-blue-400 mr-3"></i>
-                        <span>linkedin.com/in/santoswentz</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fab fa-instagram text-purple-400 mr-3"></i>
-                        <span>@santoswentz</span>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-midgray p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold mb-6">Envie uma mensagem</h3>
+                        
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-gray-300 mb-2">Nome</label>
+                                <input type="text" id="name" class="w-full bg-lightgray border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-300 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full bg-lightgray border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-300 mb-2">Mensagem</label>
+                                <textarea id="message" rows="4" class="w-full bg-lightgray border border-gray-600 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-accent hover:bg-accentHover text-white font-medium py-3 px-6 rounded-lg transition duration-300">
+                                Enviar Mensagem
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-8 px-4">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="mailto:wentz.dev@gmail.com" class="text-gray-400 hover:text-accent transition">
+                    <i class="fas fa-envelope text-xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/santoswentz" class="text-gray-400 hover:text-accent transition">
+                    <i class="fab fa-linkedin-in text-xl"></i>
+                </a>
+                <a href="#" class="text-gray-400 hover:text-accent transition">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+            </div>
+            
+            <p class="text-gray-500">© 2023 Eduardo Wentz. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
     <script>
-        // Funções para trocar de página
-        function changePage(pageId) {
-            // Esconder todas as páginas
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            
-            // Mostrar a página selecionada
-            document.getElementById(pageId).classList.add('active');
-            
-            // Scroll para o topo
-            window.scrollTo(0, 0);
-        }
-        
-        // Funções para mostrar/ocultar modais
-        function showModal(modalId) {
-            document.getElementById(modalId).classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function hideModal(modalId) {
-            document.getElementById(modalId).classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-        
-        // Fechar modal clicando fora do conteúdo
-        document.querySelectorAll('.modal').forEach(modal => {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    hideModal(modal.id);
+        // Animação de revelação ao scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
                 }
             });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.section-hidden').forEach((section) => {
+            observer.observe(section);
         });
         
-        // Efeitos interativos
-        document.querySelectorAll('.pixel-button').forEach(button => {
-            button.addEventListener('click', function() {
-                this.classList.add('glitch-effect');
-                setTimeout(() => {
-                    this.classList.remove('glitch-effect');
-                }, 500);
+        // Barra de progresso
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+        
+        // Menu mobile
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
             });
         });
         
-        // Inicializar animações de digitação após o carregamento
-        window.addEventListener('load', function() {
-            const typingElement = document.querySelector('.typing-animation');
-            if (typingElement) {
+        // Animação das barras de habilidade
+        function animateSkillBars() {
+            document.querySelectorAll('.skill-bar').forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
                 setTimeout(() => {
-                    typingElement.style.width = typingElement.textContent.length + 'ch';
-                }, 1000);
-            }
+                    bar.style.width = width;
+                }, 300);
+            });
+        }
+        
+        // Observar seção de habilidades para animar as barras
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkillBars();
+                    skillsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        const skillsSection = document.getElementById('habilidades');
+        if (skillsSection) {
+            skillsObserver.observe(skillsSection);
+        }
+        
+        // Formulário de contato
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Mensagem enviada! Em breve entrarei em contato.');
+            document.getElementById('contact-form').reset();
         });
     </script>
 </body>
