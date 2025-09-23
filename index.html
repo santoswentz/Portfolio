@@ -115,7 +115,7 @@
         }
         
         .achievement-badge:hover {
-            transform: scale(1.1) rotate(5deg);
+            transform: scale(1.04) translateY(-3px);
             box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
         }
             
@@ -150,7 +150,19 @@
             background-image: linear-gradient(
                 rgba(18, 18, 18, 0.85),
                 rgba(30, 30, 30, 0.9)
-            ), url('images/lutadordevbg.jpeg');
+            ), url('images/lutadordevbg1.jpeg');
+        }
+        #experiencia{ 
+            background-image: linear-gradient(
+                rgba(18, 18, 18, 0.85),
+                rgba(30, 30, 30, 0.9)
+            ), url('images/lutadordevbg2.jpeg');
+        }
+        #contato{ 
+            background-image: linear-gradient(
+                rgba(18, 18, 18, 0.85),
+                rgba(30, 30, 30, 0.9)
+            ), url('images/lutadordevbg3.jpeg');
         }
     </style>
 </head>
@@ -174,7 +186,7 @@
             </div>
             
             <div class="flex items-center">
-                <div class="bg-lightgray rounded-full px-3 py-1 text-xs">
+                <div class="border border-gray-700 rounded-full px-3 py-1 text-xs">
                     <span class="text-accent">Nível:</span> 
                     <span id="nivel">15</span> 
                     <i class="fas fa-star text-yellow-400 ml-1"></i>
@@ -214,10 +226,10 @@
                         Atualmente cursando Engenharia de Software e trabalhando com desenvolvimento Front-end.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                        <a href="pg/certificados.html" class="bg-accent hover:bg-accentHover text-white font-light py-2.5 px-5 rounded transition duration-300 text-sm">
+                        <a href="pg/certificados.html" class="minimalist-border hover:bg-midgray text-white font-light py-2.5 px-5 rounded transition duration-300 text-sm">
                                     <i class="fas fa-graduation-cap mr-2"></i> Formações e Certificados
                         </a>
-                        <a href="pg/projetos.html" class="bg-lightgray hover:bg-midgray text-white font-light py-2.5 px-5 rounded transition duration-300 text-sm">
+                        <a href="pg/projetos.html" class="minimalist-border hover:bg-midgray text-white font-light py-2.5 px-5 rounded transition duration-300 text-sm">
                             <i class="fas fa-code mr-2"></i> Projetos
                         </a>
                     </div>
@@ -245,6 +257,7 @@
             </a>
         </div>
     </section>
+
 <!-- Seção Sobre -->
 <section id="sobre" class="py-20 relative sobre-bg">
     <div class="sobre-overlay"></div>
@@ -273,13 +286,7 @@
             
             <div class="md:w-1/2">
                 <div class="bg-darkgray bg-opacity-80 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-700">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="achievement-badge bg-lightgray bg-opacity-50 p-4 rounded-lg flex flex-col items-center border border-gray-600">
-                            <div class="text-accent text-3xl mb-2">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <p class="text-center text-sm">Formação Técnica</p>
-                        </div>
+                    <div class="grid grid-cols-1 gap-4">
                         <a href="#experiencia"> 
                             <div class="achievement-badge bg-lightgray bg-opacity-50 p-4 rounded-lg flex flex-col items-center border border-gray-600">
                                 <div class="text-accent text-3xl mb-2">
@@ -288,19 +295,13 @@
                                 <p class="text-center text-sm">Experiência Profissional</p>
                             </div>
                        </a>
-                        <div class="achievement-badge bg-lightgray bg-opacity-50 p-4 rounded-lg flex flex-col items-center border border-gray-600">
-                            <div class="text-accent text-3xl mb-2">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <p class="text-center text-sm">Projetos Concluídos</p>
-                        </div>
-                        <a href="/pg/certificados.html">
+                        <a href="pg/projetos.html"> 
                             <div class="achievement-badge bg-lightgray bg-opacity-50 p-4 rounded-lg flex flex-col items-center border border-gray-600">
                                 <div class="text-accent text-3xl mb-2">
-                                    <i class="fas fa-medal"></i>
+                                    <i class="fas fa-code"></i>
                                 </div>
-                                <p class="text-center text-sm">Certificações e Certificados</p>
-                            </div>
+                                <p class="text-center text-sm">Projetos Concluídos</p>
+                            </div> 
                         </a>
                     </div>
                 </div>
@@ -419,7 +420,7 @@
     </section>
 
     <!-- Seção Experiência -->
-    <section id="experiencia" class="py-20 bg-darkgray section-hidden">
+    <section id="experiencia" class="py-20 bg-darkgray sobre-bg">
         <div class="container mx-auto px-4">
             <h2 class="text-2xl md:text-3xl font-light mb-10 text-center">
                 <span class="text-accent">#</span> Experiência
@@ -494,7 +495,7 @@
     </section>
 
     <!-- Seção Contato -->
-    <section id="contato" class="py-20 bg-darkgray section-hidden">
+    <section id="contato" class="py-20 relative sobre-bg">
         <div class="container mx-auto px-4">
             <h2 class="text-2xl md:text-3xl font-light mb-10 text-center">
                 <span class="text-accent">#</span> Contato
