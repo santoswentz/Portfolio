@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eduardo Wentz | Projetos</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> 
+
     <script>
         tailwind.config = {
             theme: {
@@ -24,12 +25,14 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #121212;
-            color: #f3f4f6;
-            scroll-behavior: smooth;
+            color: #f3f4f6;  
         }
         
         .section-hidden {
@@ -64,7 +67,7 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 100%;
+            width: 97%;
             height: 2px;
             background-color: #3B82F6;
             transform: translateX(-100%);
@@ -83,6 +86,61 @@
             0% { transform: translate(0,  0px); }
             50% { transform: translate(0, 15px); }
             100% { transform: translate(0, -0px); }
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #3B82F6;
+            white-space: nowrap;
+            animation: typing 3.5s steps(50, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #3B82F6 }
+        }
+        
+        .achievement-badge {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .achievement-badge:hover {
+            transform: scale(1.04) translateY(-3px);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+            
+        .minimalist-border {
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        /* Estilos para a seção Sobre com background */
+        .sobre-bg { 
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .sobre-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                45deg,
+                rgba(59, 130, 246, 0.1) 0%,
+                rgba(18, 18, 18, 0.8) 50%,
+                rgba(30, 30, 30, 0.9) 100%
+            );
+            z-index: 1;
         }
         
         .project-card {
@@ -115,16 +173,6 @@
             transform: translateY(0);
         }
         
-        .modal {
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            transform: scale(0.9);
-        }
-        
-        .modal-visible {
-            opacity: 1;
-            transform: scale(1);
-        }
-        
         .filter-btn {
             transition: all 0.3s ease;
         }
@@ -132,19 +180,6 @@
         .filter-btn.active {
             background-color: #3B82F6;
             color: white;
-        }
-        
-        .pixel-border {
-            border: 4px solid #3B82F6;
-            border-image: 
-                linear-gradient(
-                    45deg,
-                    #3B82F6, 
-                    #60A5FA, 
-                    #93C5FD,
-                    #60A5FA,
-                    #3B82F6
-                ) 1;
         }
         
         /* Estilizando a barra de rolagem */
@@ -172,35 +207,43 @@
         .search-box:focus {
             box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
         }
+        
+        /* Background para seção de projetos */
+        #projetos-hero { 
+            background-image: linear-gradient(
+                rgba(18, 18, 18, 0.85),
+                rgba(30, 30, 30, 0.9)
+            ), url('../images/lutadordevbg4.jpeg');
+        }
     </style>
 </head>
 <body class="bg-dark min-h-screen">
     <!-- Barra de progresso -->
     <div class="progress-bar" id="progress-bar"></div>
 
-    <!-- Menu de Navegação -->
-    <nav class="fixed w-full z-50 bg-darkgray bg-opacity-90 backdrop-blur-sm py-4 px-6 shadow-lg">
+    <!-- Menu de Navegação Gamificado -->
+    <nav class="fixed w-full z-50 bg-opacity-90 backdrop-blur-sm py-4 px-6 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-accent pixel-border px-3 py-1">EW.dev</a>
+            <a href="../index.html" class="text-xl font-light text-accent minimalist-border px-3 py-1">EW</a>
             
             <div class="hidden md:flex space-x-8">
-                <a href="../index.html" class="menu-item text-gray-300 hover:text-white font-medium">Início</a>
-                <a href="../index.html#sobre" class="menu-item text-gray-300 hover:text-white font-medium">Sobre</a>
-                <a href="../index.html#habilidades" class="menu-item text-gray-300 hover:text-white font-medium">Habilidades</a>
-                <a href="../index.html#experiencia" class="menu-item text-gray-300 hover:text-white font-medium">Experiência</a>
-                <a href="../index.html#contato" class="menu-item text-gray-300 hover:text-white font-medium">Contato</a>
-                <a href="projetos.html" class="menu-item text-accent hover:text-white font-medium">Projetos</a>
-                <a href="certificados.html" class="menu-item text-gray-300 hover:text-white font-medium">Certificados</a>
+                <a href="../index.html#inicio" class="menu-item text-gray-300 hover:text-white font-light text-sm">Início</a>
+                <a href="../index.html#sobre" class="menu-item text-gray-300 hover:text-white font-light text-sm">Sobre</a>
+                <a href="../index.html#habilidades" class="menu-item text-gray-300 hover:text-white font-light text-sm">Habilidades</a>
+                <a href="../index.html#experiencia" class="menu-item text-gray-300 hover:text-white font-light text-sm">Experiência</a>
+                <a href="../index.html#contato" class="menu-item text-gray-300 hover:text-white font-light text-sm">Contato</a>
+                <a href="projetos.html" class="menu-item text-accent hover:text-white font-light text-sm">Projetos</a>
+                <a href="certificados.html" class="menu-item text-gray-300 hover:text-white font-light text-sm">Certificados</a>
             </div>
             
             <div class="flex items-center">
-                <div class="bg-lightgray rounded-full px-3 py-1 text-sm mr-4">
+                <div class="border border-gray-700 rounded-full px-3 py-1 text-xs">
                     <span class="text-accent">Projetos:</span> 
                     <span id="project-count">0</span> 
                     <i class="fas fa-code-branch text-purple-400 ml-1"></i>
                 </div>
                 
-                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white">
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white ml-4">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
@@ -209,30 +252,30 @@
         <!-- Menu Mobile -->
         <div id="mobile-menu" class="hidden md:hidden bg-midgray mt-4 py-4 rounded-lg shadow-xl">
             <div class="flex flex-col space-y-3 px-6">
-                <a href="../index.html" class="menu-item text-gray-300 hover:text-white font-medium">Início</a>
-                <a href="../index.html#sobre" class="menu-item text-gray-300 hover:text-white font-medium">Sobre</a>
-                <a href="../index.html#habilidades" class="menu-item text-gray-300 hover:text-white font-medium">Habilidades</a>
-                <a href="../index.html#experiencia" class="menu-item text-gray-300 hover:text-white font-medium">Experiência</a>
-                <a href="../index.html#contato" class="menu-item text-gray-300 hover:text-white font-medium">Contato</a>
-                <a href="projetos.html" class="menu-item text-accent hover:text-white font-medium">Projetos</a>
-                <a href="certificados.html" class="menu-item text-gray-300 hover:text-white font-medium">Certificados</a>
+                <a href="../index.html#inicio" class="menu-item text-accent hover:text-white font-light">Início</a>
+                <a href="../index.html#sobre" class="menu-item text-gray-300 hover:text-white font-light">Sobre</a>
+                <a href="../index.html#habilidades" class="menu-item text-gray-300 hover:text-white font-light">Habilidades</a>
+                <a href="../index.html#experiencia" class="menu-item text-gray-300 hover:text-white font-light">Experiência</a>
+                <a href="projetos.html" class="menu-item text-accent hover:text-white font-light">Projetos</a>
+                <a href="certificados.html" class="menu-item text-gray-300 hover:text-white font-light">Certificados</a>
+                <a href="../index.html#contato" class="menu-item text-gray-300 hover:text-white font-light">Contato</a>
             </div>
         </div>
     </nav>
 
     <!-- Seção Hero Projetos -->
-    <section class="min-h-[30vh] flex items-center justify-center pt-28 pb-8 px-4">
-        <div class="container mx-auto text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Meus <span class="text-accent">Projetos</span></h1>
+    <section id="projetos-hero" class="min-h-[40vh] flex items-center justify-center pt-20 pb-8 px-4 relative sobre-bg">
+        <div class="sobre-overlay"></div>
+        <div class="container mx-auto text-center relative z-10">
+            <h1 class="text-3xl md:text-4xl font-light mb-4">Meus <span class="text-accent">Projetos</span></h1>
             <p class="text-gray-400 max-w-2xl mx-auto">
                 Aqui estão alguns dos projetos que desenvolvi ao longo da minha jornada como desenvolvedor.
             </p>
-             
         </div>
     </section>
 
     <!-- Seção Pesquisa -->
-    <section class="py-6 px-4 bg-darkgray">
+    <section class="py-8 px-4 bg-darkgray">
         <div class="container mx-auto">
             <div class="max-w-2xl mx-auto">
                 <div class="relative">
@@ -243,20 +286,20 @@
                 </div>
             </div>
             
-            <div class="mt-6 flex flex-wrap justify-center gap-4">
-                <button class="filter-btn bg-midgray hover:bg-lightgray text-gray-300 px-4 py-2 rounded-lg active" data-filter="all">
+            <div class="mt-6 flex flex-wrap justify-center gap-3">
+                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm active" data-filter="all">
                     Todos
                 </button>
-                <button class="filter-btn bg-midgray hover:bg-lightgray text-gray-300 px-4 py-2 rounded-lg" data-filter="web">
+                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="web">
                     Web
                 </button>
-                <button class="filter-btn bg-midgray hover:bg-lightgray text-gray-300 px-4 py-2 rounded-lg" data-filter="mobile">
+                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="mobile">
                     Mobile
                 </button>
-                <button class="filter-btn bg-midgray hover:bg-lightgray text-gray-300 px-4 py-2 rounded-lg" data-filter="fullstack">
+                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="fullstack">
                     Fullstack
                 </button>
-                <button class="filter-btn bg-midgray hover:bg-lightgray text-gray-300 px-4 py-2 rounded-lg" data-filter="javascript">
+                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="javascript">
                     JavaScript
                 </button>
             </div>
@@ -273,8 +316,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark py-8 px-4 mt-12">
-        <div class="container mx-auto text-center">
+    <footer class="bg-dark py-8">
+        <div class="container mx-auto px-4 text-center">
             <div class="flex justify-center space-x-6 mb-6">
                 <a href="mailto:wentz.dev@gmail.com" class="text-gray-400 hover:text-accent transition">
                     <i class="fas fa-envelope text-xl"></i>
@@ -287,7 +330,7 @@
                 </a>
             </div>
             
-            <p class="text-gray-500">© 2023 Eduardo Wentz. Todos os direitos reservados.</p>
+            <p class="text-gray-500">© 2025 Eduardo Wentz. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -508,12 +551,32 @@
                 menu.classList.toggle('hidden');
             });
             
+            // Fechar menu ao clicar em um link
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                });
+            });
+            
             // Barra de progresso
             window.addEventListener('scroll', () => {
                 const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
                 const scrolled = (winScroll / height) * 100;
                 document.getElementById('progress-bar').style.width = scrolled + '%';
+            });
+            
+            // Animação de revelação ao scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('section-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.section-hidden').forEach((section) => {
+                observer.observe(section);
             });
         });
     </script>
