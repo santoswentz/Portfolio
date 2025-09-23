@@ -33,7 +33,6 @@
             font-family: 'Inter', sans-serif;
             background-color: #121212;
             color: #f3f4f6;  
-
         }
         
         .section-hidden {
@@ -123,6 +122,36 @@
         .minimalist-border {
             border: 1px solid rgba(59, 130, 246, 0.3);
         }
+
+        /* Estilos para a seção Sobre com background */
+        .sobre-bg { 
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .sobre-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                45deg,
+                rgba(59, 130, 246, 0.1) 0%,
+                rgba(18, 18, 18, 0.8) 50%,
+                rgba(30, 30, 30, 0.9) 100%
+            );
+            z-index: 1;
+        }
+        #sobre{ 
+            background-image: linear-gradient(
+                rgba(18, 18, 18, 0.85),
+                rgba(30, 30, 30, 0.9)
+            ), url('images/lutadordevbg.jpeg');
+        }
     </style>
 </head>
 <body class="bg-dark min-h-screen">
@@ -130,8 +159,8 @@
     <div class="progress-bar" id="progress-bar"></div>
 
     <!-- Menu de Navegação Gamificado -->
-    <nav class="fixed w-full z-50  bg-opacity-90 backdrop-blur-sm py-4 px-6  shadow-lg">
-        <div class="container mx-auto flex justify-between items-center mx-10">
+    <nav class="fixed w-full z-50 bg-opacity-90 backdrop-blur-sm py-4 px-6 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-xl font-light text-accent minimalist-border px-3 py-1">EW</a>
             
             <div class="hidden md:flex space-x-8">
@@ -145,13 +174,13 @@
             </div>
             
             <div class="flex items-center">
-                <div class="bg-lightgray rounded-full px-3 py-1 text-xs ">
+                <div class="bg-lightgray rounded-full px-3 py-1 text-xs">
                     <span class="text-accent">Nível:</span> 
                     <span id="nivel">15</span> 
                     <i class="fas fa-star text-yellow-400 ml-1"></i>
                 </div>
                 
-                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white">
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white ml-4">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
@@ -159,36 +188,34 @@
         
         <!-- Menu Mobile -->
         <div id="mobile-menu" class="hidden md:hidden bg-midgray mt-4 py-4 rounded-lg shadow-xl">
-            <div class="flex flex-col space-y-3 px-6 ">
+            <div class="flex flex-col space-y-3 px-6">
                 <a href="#inicio" class="menu-item text-accent hover:text-white font-light">Início</a>
                 <a href="#sobre" class="menu-item text-gray-300 hover:text-white font-light">Sobre</a>
                 <a href="#habilidades" class="menu-item text-gray-300 hover:text-white font-light">Habilidades</a>
                 <a href="#experiencia" class="menu-item text-gray-300 hover:text-white font-light">Experiência</a>
                 <a href="pg/projetos.html" class="menu-item text-accent hover:text-white font-light">Projetos</a>
                 <a href="pg/certificados.html" class="menu-item text-gray-300 hover:text-white font-light">Certificados</a>
-                <a href="#contato" class="menu-item text-gray-300 hover:text-white font-s">Contato</a>
+                <a href="#contato" class="menu-item text-gray-300 hover:text-white font-light">Contato</a>
             </div>
         </div>
     </nav>
 
     <!-- Seção Hero -->
     <section id="inicio" class="min-h-screen flex items-center justify-center pt-20 pb-16 px-4">
-        <div class="container mx-auto flex flex-col md:flex-row items-center ">
-           
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 text-center mb-10 md:mb-0 flex justify-center">
-
                 <div class="md:text-left">
                     <h1 class="text-4xl md:text-5xl font-light mb-4">Eduardo <span class="text-accent font-normal">Wentz</span></h1>
-                    <div class=" mb-3 inline-block">
-                    <p class="typewriter text-lg md:text-xl text-gray-300  ">Desenvolvedor Full-Stack </p>  
+                    <div class="mb-3 inline-block">
+                        <p class="typewriter text-lg md:text-xl text-gray-300">Desenvolvedor Full-Stack</p>  
                     </div>
                     <p class="text-gray-400 mb-8 max-w-md mx-auto md:mx-0">
                         Construindo soluções digitais com foco em otimização, UX e UI. 
                         Atualmente cursando Engenharia de Software e trabalhando com desenvolvimento Front-end.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-                        <a href="#contato" class="bg-accent hover:bg-accentHover text-white font-light py-2.5 px-5 rounded transition duration-300 text-sm">
-                            <i class="fas fa-envelope mr-2"></i> Contato
+                        <a href="pg/certificados.html" class="bg-accent hover:bg-accentHover text-white font-light py-2.5 px-5 rounded transition duration-300 text-sm">
+                                    <i class="fas fa-graduation-cap mr-2"></i> Formações e Certificados
                         </a>
                         <a href="pg/projetos.html" class="bg-lightgray hover:bg-midgray text-white font-light py-2.5 px-5 rounded transition duration-300 text-sm">
                             <i class="fas fa-code mr-2"></i> Projetos
@@ -202,16 +229,14 @@
                     <div class="absolute inset-0 bg-accent rounded-full opacity-20 floating"></div>
                     <div class="absolute inset-0 bg-gradient-to-br from-accent to-transparent rounded-full opacity-30 floating" style="animation-delay: 1s;"></div>
                     <div class="absolute inset-4 bg-darkgray rounded-full flex items-center justify-center floating" style="animation-delay: 2s;">
-                    <img 
-                        src="images/FotoUserPortifolio.png"
-                        alt="Foto de Perfil"
-                        class="w-full h-full object-cover rounded-full m-2"
-                    >
+                        <img 
+                            src="images/FotoUserPortifolio.png"
+                            alt="Foto de Perfil"
+                            class="w-full h-full object-cover rounded-full m-2"
+                        >
                     </div>
                 </div>
             </div>
-
-            
         </div>
         
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
@@ -220,83 +245,80 @@
             </a>
         </div>
     </section>
-
-    <!-- Seção Sobre -->
-    <section id="sobre" class="py-20 px-14 bg-darkgray  flex items-center justify-center ">
-        <div class="container mx-auto">
-            
-            <h2 class="text-2xl md:text-3xl font-light mb-10 text-center">
-                <span class="text-accent">#</span> Sobre Mim
-            </h2>
-            
-            <div class="flex flex-col md:flex-row items-center gap-10">
-                <div class="md:w-1/2">
-                    <div class="bg-midgray p-8 rounded-xl shadow-lg"> 
-                        <p class="text-gray-300 mb-6 text-sm leading-relaxed">
-                            Sou desenvolvedor com experiência em soluções digitais com foco em otimização, UX e UI. 
-                            Atualmente, curso Engenharia de Software na FSG.
-                        </p>
-                        <p class="text-gray-300 mb-6 text-sm leading-relaxed">
-                            Possuo certificações técnicas em Desenvolvimento Web e Mobile, com experiência prática 
-                            em diversas tecnologias modernas.
-                        </p>
-                        <p class="text-gray-300 text-sm leading-relaxed">
-                            Atualmente trabalho como desenvolvedor Front-end, com interesse em migrar para o Back-end, 
-                            onde posso aplicar meus conhecimentos em Laravel, APIs RESTful e bancos de dados.
-                        </p>
-                    </div>
+<!-- Seção Sobre -->
+<section id="sobre" class="py-20 relative sobre-bg">
+    <div class="sobre-overlay"></div>
+    <div class="container mx-auto px-4 relative z-10">
+        <h2 class="text-2xl md:text-3xl font-light mb-10 text-center">
+            <span class="text-accent">#</span> Sobre Mim
+        </h2>
+        
+        <div class="flex flex-col md:flex-row items-center gap-10">
+            <div class="md:w-1/2">
+                <div class="bg-darkgray bg-opacity-80 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-700"> 
+                    <p class="text-gray-300 mb-6 text-sm leading-relaxed">
+                        Sou desenvolvedor com experiência em soluções digitais com foco em otimização, UX e UI. 
+                        Atualmente, curso Engenharia de Software na FSG.
+                    </p>
+                    <p class="text-gray-300 mb-6 text-sm leading-relaxed">
+                        Possuo certificações técnicas em Desenvolvimento Web e Mobile, com experiência prática 
+                        em diversas tecnologias modernas.
+                    </p>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Atualmente trabalho como desenvolvedor Front-end, com interesse em migrar para o Back-end, 
+                        onde posso aplicar meus conhecimentos em Laravel, APIs RESTful e bancos de dados.
+                    </p>
                 </div>
-                
-                <div class="md:w-1/2">
-                    <div class="bg-midgray p-8 rounded-xl shadow-lg ">
-           
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="achievement-badge bg-lightgray p-4 rounded-lg flex flex-col items-center">
-                                <div class="text-accent text-3xl mb-2">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <p class="text-center text-sm">Formação Técnica</p>
+            </div>
+            
+            <div class="md:w-1/2">
+                <div class="bg-darkgray bg-opacity-80 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-700">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="achievement-badge bg-lightgray bg-opacity-50 p-4 rounded-lg flex flex-col items-center border border-gray-600">
+                            <div class="text-accent text-3xl mb-2">
+                                <i class="fas fa-graduation-cap"></i>
                             </div>
-                            <a href="#experiencia"> 
-                                <div class="achievement-badge bg-lightgray p-4 rounded-lg flex flex-col items-center">
-                                    <div class="text-accent text-3xl mb-2">
-                                        <i class="fas fa-briefcase"></i>
-                                    </div>
-                                    <p class="text-center text-sm">Experiência Profissional</p>
-                                </div>
-                           </a>
-                            <div class="achievement-badge bg-lightgray p-4 rounded-lg flex flex-col items-center">
-                                <div class="text-accent text-3xl mb-2">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                                <p class="text-center text-sm">Projetos Concluídos</p>
-                            </div>
-                            <a href="/pg/certificados.html">
-                                <div class="achievement-badge bg-lightgray p-4 rounded-lg flex flex-col items-center">
-                                    <div class="text-accent text-3xl mb-2">
-                                        <i class="fas fa-medal"></i>
-                                    </div>
-                                    <p class="text-center text-sm">Certificações e Certificados</p>
-                                </div>
-                            </a>
+                            <p class="text-center text-sm">Formação Técnica</p>
                         </div>
+                        <a href="#experiencia"> 
+                            <div class="achievement-badge bg-lightgray bg-opacity-50 p-4 rounded-lg flex flex-col items-center border border-gray-600">
+                                <div class="text-accent text-3xl mb-2">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <p class="text-center text-sm">Experiência Profissional</p>
+                            </div>
+                       </a>
+                        <div class="achievement-badge bg-lightgray bg-opacity-50 p-4 rounded-lg flex flex-col items-center border border-gray-600">
+                            <div class="text-accent text-3xl mb-2">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <p class="text-center text-sm">Projetos Concluídos</p>
+                        </div>
+                        <a href="/pg/certificados.html">
+                            <div class="achievement-badge bg-lightgray bg-opacity-50 p-4 rounded-lg flex flex-col items-center border border-gray-600">
+                                <div class="text-accent text-3xl mb-2">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <p class="text-center text-sm">Certificações e Certificados</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Seção Habilidades -->
-    <section id="habilidades" class="py-20 px-4 bg-dark section-hidden ">
-        <div class="container mx-auto">
-            
+    <section id="habilidades" class="py-20 bg-dark section-hidden">
+        <div class="container mx-auto px-4">
             <h2 class="text-2xl md:text-3xl font-light mb-10 text-center">
                 <span class="text-accent">#</span> Habilidades
             </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <!-- Frontend -->
-                <div class="bg-darkgray p-6 rounded-xl shadow-lg ">
+                <div class="bg-darkgray p-6 rounded-xl shadow-lg">
                     <h3 class="text-xl font-bold mb-4 text-accent flex items-center">
                         <i class="fas fa-paint-brush mr-2"></i> Front-end
                     </h3>
@@ -324,7 +346,7 @@
                         
                         <div>
                             <div class="flex justify-between mb-1">
-                                <span>React </span>
+                                <span>React</span>
                                 <span>60%</span>
                             </div>
                             <div class="w-full bg-lightgray rounded-full h-2.5">
@@ -397,14 +419,13 @@
     </section>
 
     <!-- Seção Experiência -->
-    <section id="experiencia" class="py-20 px-4 bg-darkgray section-hidden">
-        <div class="container mx-auto">
-            
+    <section id="experiencia" class="py-20 bg-darkgray section-hidden">
+        <div class="container mx-auto px-4">
             <h2 class="text-2xl md:text-3xl font-light mb-10 text-center">
                 <span class="text-accent">#</span> Experiência
             </h2>
             
-            <div class="relative">
+            <div class="relative max-w-4xl mx-auto">
                 <!-- Linha do tempo -->
                 <div class="absolute left-0 md:left-1/2 top-0 h-full w-1 bg-accent transform -translate-x-1/2"></div>
                 
@@ -450,14 +471,13 @@
     </section>
 
     <!-- Seção Formação -->
-    <section id="formacao" class="py-20 px-4 bg-dark section-hidden">
-        <div class="container mx-auto">
-            
+    <section id="formacao" class="py-20 bg-dark section-hidden">
+        <div class="container mx-auto px-4">
             <h2 class="text-2xl md:text-3xl font-light mb-10 text-center">
                 <span class="text-accent">#</span> Formação
             </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div class="bg-darkgray p-6 rounded-xl shadow-lg">
                     <h3 class="text-xl font-bold mb-2 text-accent">FSG - Centro Universitário da Serra Gaúcha</h3>
                     <p class="text-gray-300">Ensino Superior, Engenharia de Software</p>
@@ -474,17 +494,16 @@
     </section>
 
     <!-- Seção Contato -->
-    <section id="contato" class="py-20 px-4 bg-darkgray section-hidden">
-        <div class="container mx-auto">
-            
+    <section id="contato" class="py-20 bg-darkgray section-hidden">
+        <div class="container mx-auto px-4">
             <h2 class="text-2xl md:text-3xl font-light mb-10 text-center">
                 <span class="text-accent">#</span> Contato
             </h2>
             
-            <div class="flex flex-col md:flex-row gap-10">
+            <div class="flex flex-col md:flex-row gap-10 max-w-4xl mx-auto">
                 <div class="md:w-1/2">
                     <div class="bg-midgray p-8 rounded-xl shadow-lg">
-                        <h3 class="text-2xl   mb-6">Vamos conversar!</h3>
+                        <h3 class="text-2xl mb-6">Vamos conversar!</h3>
                         
                         <div class="space-y-4">
                             <div class="flex items-center">
@@ -522,7 +541,7 @@
                 
                 <div class="md:w-1/2">
                     <div class="bg-midgray p-8 rounded-xl shadow-lg">
-                        <h3 class="text-2xl   mb-6">Envie uma mensagem!</h3>
+                        <h3 class="text-2xl mb-6">Envie uma mensagem!</h3>
                         
                         <form id="contact-form" class="space-y-4">
                             <div>
@@ -551,8 +570,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark py-8 px-4">
-        <div class="container mx-auto text-center">
+    <footer class="bg-dark py-8">
+        <div class="container mx-auto px-4 text-center">
             <div class="flex justify-center space-x-6 mb-6">
                 <a href="mailto:wentz.dev@gmail.com" class="text-gray-400 hover:text-accent transition">
                     <i class="fas fa-envelope text-xl"></i>
