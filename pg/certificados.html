@@ -6,6 +6,7 @@
     <title>Eduardo Wentz | Certificações</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> 
+    <link rel="icon" type="image/png" href="favicon.png">
 
     <script>
         tailwind.config = {
@@ -187,7 +188,7 @@
     <div class="progress-bar" id="progress-bar"></div>
 
     <!-- Menu de Navegação Gamificado -->
-    <nav class="fixed w-full z-50 bg-opacity-90 backdrop-blur-sm py-4 px-6 shadow-lg">
+      <nav class="fixed w-full z-50 bg-opacity-90 backdrop-blur-sm py-4 px-6 shadow-lg">
         <div class="container mx-auto flex justify-between items-center">
             <a href="../index.html" class="text-xl font-light text-accent minimalist-border px-3 py-1">EW</a>
             
@@ -246,18 +247,22 @@
                 <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm active" data-filter="all">
                     Todos
                 </button>
-                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="tecnico">
+                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="Técnico">
                     Técnicos
                 </button>
-                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="graduacao">
-                    Graduação
-                </button>
-                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="curso">
+                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="Curso">
                     Cursos
                 </button>
-                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="senac">
-                    Senac RS
+                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="Cybersegurança">
+                    Cybersegurança
                 </button>
+                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="Design">
+                    Design
+                </button>
+                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="Graduacao">
+                    Graduação
+                </button>
+                
             </div>
         </div>
     </section>
@@ -312,218 +317,299 @@
             <p class="text-gray-500">© 2025 Eduardo Wentz. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <style>
+    /* Adicionar estilos específicos para as imagens dos certificados */
+    .certificate-image-container {
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+        background: #1E1E1E;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .certificate-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background: #1E1E1E;
+    }
+    
+    .certificate-card {
+        transition: all 0.3s ease;
+        border: 1px solid #333;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .certificate-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.4);
+        border-color: #3B82F6;
+    }
+    
+    .certificate-content {
+        padding: 1.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .certificate-title {
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+        min-height: 2.8rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .certificate-info {
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        color: #9CA3AF;
+        font-size: 0.875rem;
+    }
+    
+    .certificate-date {
+        color: #6B7280;
+        font-size: 0.75rem;
+        display: flex;
+        align-items: center;
+    }
+    
+    .certificate-tags {
+        margin-top: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+    
+    .tag {
+        background: #333333;
+        color: #D1D5DB;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+    }
+</style>
 
-    <script>
-        // Dados dos certificados
-        const certificates = [
-            {
-                id: 1,
-                title: "Desenvolvimento Web",
-                institution: "Senac RS",
-                date: "Dezembro 2022",
-                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=Certificado+Web",
-                description: "Certificação técnica em desenvolvimento web com foco em HTML, CSS, JavaScript e PHP.",
-                tags: ["senac", "tecnico"],
-                credentialLink: "#"
-            },
-            {
-                id: 2,
-                title: "Aplicativos Mobile",
-                institution: "Senac RS",
-                date: "Junho 2023",
-                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=Certificado+Mobile",
-                description: "Certificação técnica em desenvolvimento de aplicativos mobile com React Native.",
-                tags: ["senac", "tecnico"],
-                credentialLink: "#"
-            },
-            {
-                id: 3,
-                title: "Engenharia de Software",
-                institution: "FSG",
-                date: "Cursando",
-                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=Engenharia+Software",
-                description: "Graduação em Engenharia de Software com previsão de conclusão em junho de 2029.",
-                tags: ["graduacao"],
-                credentialLink: "#"
-            },
-            {
-                id: 4,
-                title: "Laravel Avançado",
-                institution: "Udemy",
-                date: "Março 2023",
-                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=Laravel+Avançado",
-                description: "Curso avançado de Laravel com foco em APIs RESTful e boas práticas de desenvolvimento.",
-                tags: ["curso"],
-                credentialLink: "#"
-            },
-            {
-                id: 5,
-                title: "React Native & Firebase",
-                institution: "Alura",
-                date: "Agosto 2023",
-                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=React+Native",
-                description: "Desenvolvimento de aplicativos mobile com React Native e integração com Firebase.",
-                tags: ["curso"],
-                credentialLink: "#"
-            },
-            {
-                id: 6,
-                title: "Tailwind CSS Master",
-                institution: "YouTube",
-                date: "Janeiro 2023",
-                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=Tailwind+CSS",
-                description: "Domínio completo do framework Tailwind CSS para desenvolvimento de interfaces modernas.",
-                tags: ["curso"],
-                credentialLink: "#"
-            }
-        ];
+<script>
+    // Dados dos certificados com imagens JPG locais
+    const certificates = [
+        {
+            id: 1,
+            title: "Fundamentos de Testes de Invasão",
+            institution: "DIO",
+            date: "Agosto 2025",
+            image: "../images/certificados/CPYGRZLO_page-0001.jpg",
+            description: "Certificado na habilidate de testar a segurança para os sites que desenvolvo.",
+            tags: ["Curso", "Cybersegurança" ],
+            credentialLink: "#"
+        },
+        {
+            id: 2,
+            title: "Github Certification",
+            institution: "DIO",
+            date: "Agosto 2025",
+            image: "../images/certificados/IQJEUJCV_page-0001.jpg",
+            description: "Certificado em Versionamento de Código com Git e GitHub para controle de versões.",
+            tags: ["Curso" ],
+            credentialLink: "#"
+        },
+        {
+            id: 3,
+            title: "Principios de Enumeração e Exploração de Vulnerabilidades",
+            institution: "DIO",
+            date: "Agosto 2025",
+            image: "../images/certificados/RCPDVWRR_page-0001.jpg",
+            description: "Certificado na habilidate de testar a segurança para os sites que desenvolvo.",
+            tags: ["Curso", "Cybersegurança" ],
+            credentialLink: "#"
+        },
+        {
+            id: 4,
+            title: "Fundamentos UX",
+            institution: "DIO",
+            date: "Agosto 2025",
+            image: "../images/certificados/W0EG2NKI_page-0001.jpg",
+            description: "Certificado de conhecimento de fundamentos de User Experience.",
+            tags: ["Curso", "Design" ],
+            credentialLink: "#"
+        },
+        {
+            id: 5,
+            title: "Fundamentos de Cibersegurança",
+            institution: "DIO",
+            date: "Setembro 2025",
+            image: "../images/certificados/WBPHMZFM_page-0001.jpg",
+            description: "Certificado em integração com Firebase e serviços em cloud para aplicações modernas.",
+            tags: ["Curso", "Cybersegurança" ],
+            credentialLink: "#"
+        }, 
+    ];
 
-        // Função para renderizar os certificados
-        function renderCertificates(filter = 'all') {
-            const container = document.getElementById('certificates-container');
-            container.innerHTML = '';
+    // Função para renderizar os certificados
+    function renderCertificates(filter = 'all') {
+        const container = document.getElementById('certificates-container');
+        container.innerHTML = '';
+        
+        const filteredCertificates = filter === 'all' 
+            ? certificates 
+            : certificates.filter(cert => cert.tags.includes(filter));
+        
+        // Atualizar contador
+        document.getElementById('certificate-count').textContent = filteredCertificates.length;
+        
+        if (filteredCertificates.length === 0) {
+            container.innerHTML = `
+                <div class="col-span-full text-center py-10">
+                    <i class="fas fa-search text-4xl text-gray-600 mb-4"></i>
+                    <p class="text-gray-400">Nenhum certificado encontrado nesta categoria.</p>
+                </div>
+            `;
+            return;
+        }
+        
+        filteredCertificates.forEach(cert => {
+            const card = document.createElement('div');
+            card.className = 'certificate-card bg-darkgray rounded-xl overflow-hidden cursor-pointer';
             
-            const filteredCertificates = filter === 'all' 
-                ? certificates 
-                : certificates.filter(cert => cert.tags.includes(filter));
-            
-            // Atualizar contador
-            document.getElementById('certificate-count').textContent = filteredCertificates.length;
-            
-            if (filteredCertificates.length === 0) {
-                container.innerHTML = `
-                    <div class="col-span-full text-center py-10">
-                        <i class="fas fa-search text-4xl text-gray-600 mb-4"></i>
-                        <p class="text-gray-400">Nenhum certificado encontrado nesta categoria.</p>
+            card.innerHTML = `
+                <div class="certificate-image-container">
+                    <img src="${cert.image}" alt="${cert.title}" class="certificate-image">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-expand text-white text-2xl opacity-0 hover:opacity-100 transition-opacity duration-300"></i>
                     </div>
-                `;
-                return;
-            }
+                </div>
+                <div class="certificate-content">
+                    <h3 class="certificate-title">${cert.title}</h3>
+                    <p class="certificate-info">
+                        <i class="fas fa-university mr-2 text-accent"></i>${cert.institution}
+                    </p>
+                    <p class="certificate-date">
+                        <i class="fas fa-calendar-alt mr-2 text-accent"></i>${cert.date}
+                    </p>
+                    <div class="certificate-tags">
+                        ${cert.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                </div>
+            `;
             
-            filteredCertificates.forEach(cert => {
-                const card = document.createElement('div');
-                card.className = 'certificate-card bg-darkgray rounded-xl overflow-hidden cursor-pointer';
-                card.innerHTML = `
-                    <div class="h-48 overflow-hidden">
-                        <img src="${cert.image}" alt="${cert.title}" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">${cert.title}</h3>
-                        <p class="text-gray-400 mb-2">${cert.institution}</p>
-                        <p class="text-gray-500 text-sm">${cert.date}</p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            ${cert.tags.map(tag => `<span class="bg-lightgray text-gray-300 text-xs px-2 py-1 rounded">${tag}</span>`).join('')}
-                        </div>
-                    </div>
-                `;
+            card.addEventListener('click', () => openModal(cert));
+            container.appendChild(card);
+        });
+    }
+
+    // Função para abrir o modal com detalhes do certificado
+    function openModal(certificate) {
+        const modal = document.getElementById('certificate-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalImage = document.getElementById('modal-image');
+        const modalDescription = document.getElementById('modal-description');
+        const modalDate = document.getElementById('modal-date');
+        const modalLink = document.getElementById('modal-link');
+        const modalTags = document.getElementById('modal-tags');
+        
+        modalTitle.textContent = certificate.title;
+        modalImage.src = certificate.image;
+        modalImage.alt = certificate.title;
+        modalDescription.textContent = certificate.description;
+        modalDate.innerHTML = `<i class="fas fa-calendar-alt mr-2 text-accent"></i>Emitido em: ${certificate.date}`;
+        modalLink.href = certificate.credentialLink;
+        
+        // Limpar e adicionar tags
+        modalTags.innerHTML = '';
+        certificate.tags.forEach(tag => {
+            const tagElement = document.createElement('span');
+            tagElement.className = 'bg-lightgray text-gray-300 text-xs px-2 py-1 rounded';
+            tagElement.textContent = tag;
+            modalTags.appendChild(tagElement);
+        });
+        
+        // Mostrar o modal
+        modal.classList.remove('pointer-events-none');
+        modal.classList.add('pointer-events-auto', 'opacity-100');
+        document.querySelector('.modal').classList.add('modal-visible');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Função para fechar o modal
+    function closeModal() {
+        const modal = document.getElementById('certificate-modal');
+        modal.classList.add('pointer-events-none', 'opacity-0');
+        modal.classList.remove('pointer-events-auto', 'opacity-100');
+        document.querySelector('.modal').classList.remove('modal-visible');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Inicialização quando o DOM estiver carregado
+    document.addEventListener('DOMContentLoaded', function() {
+        // Renderizar certificados inicialmente
+        renderCertificates();
+        
+        // Configurar filtros
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
                 
-                card.addEventListener('click', () => openModal(cert));
-                container.appendChild(card);
-            });
-        }
-
-        // Função para abrir o modal com detalhes do certificado
-        function openModal(certificate) {
-            const modal = document.getElementById('certificate-modal');
-            const modalTitle = document.getElementById('modal-title');
-            const modalImage = document.getElementById('modal-image');
-            const modalDescription = document.getElementById('modal-description');
-            const modalDate = document.getElementById('modal-date');
-            const modalLink = document.getElementById('modal-link');
-            const modalTags = document.getElementById('modal-tags');
-            
-            modalTitle.textContent = certificate.title;
-            modalImage.src = certificate.image;
-            modalImage.alt = certificate.title;
-            modalDescription.textContent = certificate.description;
-            modalDate.textContent = `Emitido em: ${certificate.date}`;
-            modalLink.href = certificate.credentialLink;
-            
-            // Limpar e adicionar tags
-            modalTags.innerHTML = '';
-            certificate.tags.forEach(tag => {
-                const tagElement = document.createElement('span');
-                tagElement.className = 'bg-lightgray text-gray-300 text-xs px-2 py-1 rounded';
-                tagElement.textContent = tag;
-                modalTags.appendChild(tagElement);
-            });
-            
-            // Mostrar o modal
-            modal.classList.remove('pointer-events-none');
-            modal.classList.add('pointer-events-auto', 'opacity-100');
-            document.querySelector('.modal').classList.add('modal-visible');
-            document.body.style.overflow = 'hidden';
-        }
-
-        // Função para fechar o modal
-        function closeModal() {
-            const modal = document.getElementById('certificate-modal');
-            modal.classList.add('pointer-events-none', 'opacity-0');
-            modal.classList.remove('pointer-events-auto', 'opacity-100');
-            document.querySelector('.modal').classList.remove('modal-visible');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Inicialização quando o DOM estiver carregado
-        document.addEventListener('DOMContentLoaded', function() {
-            // Renderizar certificados inicialmente
-            renderCertificates();
-            
-            // Configurar filtros
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const filter = this.getAttribute('data-filter');
-                    
-                    // Atualizar botão ativo
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Renderizar certificados filtrados
-                    renderCertificates(filter);
-                });
-            });
-            
-            // Configurar fechamento do modal
-            document.getElementById('close-modal').addEventListener('click', closeModal);
-            document.getElementById('certificate-modal').addEventListener('click', function(e) {
-                if (e.target === this) closeModal();
-            });
-            
-            // Menu mobile
-            document.getElementById('mobile-menu-button').addEventListener('click', () => {
-                const menu = document.getElementById('mobile-menu');
-                menu.classList.toggle('hidden');
-            });
-            
-            // Fechar menu ao clicar em um link
-            document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    document.getElementById('mobile-menu').classList.add('hidden');
-                });
-            });
-            
-            // Barra de progresso
-            window.addEventListener('scroll', () => {
-                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (winScroll / height) * 100;
-                document.getElementById('progress-bar').style.width = scrolled + '%';
-            });
-            
-            // Animação de revelação ao scroll
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('section-visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            document.querySelectorAll('.section-hidden').forEach((section) => {
-                observer.observe(section);
+                // Atualizar botão ativo
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Renderizar certificados filtrados
+                renderCertificates(filter);
             });
         });
-    </script>
+        
+        // Configurar fechamento do modal
+        document.getElementById('close-modal').addEventListener('click', closeModal);
+        document.getElementById('certificate-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+        
+        // Menu mobile
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+        
+        // Barra de progresso
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+        
+        // Animação de revelação ao scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.section-hidden').forEach((section) => {
+            observer.observe(section);
+        });
+    });
+</script>
 </body>
-</html>
+</html> 
