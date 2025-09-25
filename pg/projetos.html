@@ -554,10 +554,10 @@
     </nav>
  
     <!-- Seção Projetos -->
-    <section id="projetos" class="py-12 px-4 ">
+    <section id="projetos" class="pt-16 px-4 ">
         <div class="container mx-auto ">
             <!-- Controles de navegação -->
-            <div class="flex justify-center items-center space-x-4 py-4 mx-3 my-4">
+            <div class="flex justify-center items-center space-x-4 py-3 mx-3 mt-4">
                 
                 <!-- Botões de navegação (esquerda) -->
                 <div class="flex space-x-4">
@@ -621,13 +621,13 @@
                 id: 1,
                 title: "Casa do Menor",
                 description: "Plataforma Administrativa desenvolvida para toda a organização de controle de ponto e financeira da Casa do Menor, focada na experiência do usuário e performance.",
-                image: "../images/projetosfotos/Casadomenor/casa-do-menor- (1).png",
+                image: "../images/projetosfotos/Casadomenor/casa-do-menor- (2).png",
                 images: [
                     "../images/projetosfotos/Casadomenor/casa-do-menor- (1).png",
                     "../images/projetosfotos/Casadomenor/casa-do-menor- (2).png",
                     "../images/projetosfotos/Casadomenor/casa-do-menor- (3).png"
                 ],
-                technologies: ["Laravel", "DomPDF", "JsDelivr", "APIRESTFull", "TailwindCSS", "JWT"],
+                technologies: ["Laravel", "DomPDF", "JsDelivr", "APIRESTFull", "TailwindCSS" ],
                 tags: ["web", "fullstack", "javascript"],
                 projectLink: "#",
                 githubLink: "#",
@@ -802,7 +802,7 @@
             container.innerHTML = `
                 <div class="project-slide active flex flex-col md:flex-row h-full">
                     <div class="md:w-1/2 h-64 md:h-full overflow-hidden">
-                        <img src="${project.image}" alt="${project.title}" class="project-image w-full h-full object-cover">
+                        <img src="${project.image}" alt="${project.title}" class="project-image w-full h-full object-contain">
                     </div>
                     <div class="md:w-1/2 p-8 flex flex-col justify-between">
                         <div>
@@ -835,7 +835,7 @@
                         
                         <div>
                             <h4 class="text-lg font-semibold mb-2">Observações do Projeto</h4>
-                            <div class="space-y-3 max-h-40 overflow-y-auto pr-2">
+                            <div class="space-y-3 max-h-40 overflow-y-auto pr-2  overflow-y-hidden">
                                 ${project.observations.map(obs => `
                                     <div class="observation-card bg-gray-800 p-3 rounded-lg">
                                         <p class="text-sm">${obs.text}</p>
