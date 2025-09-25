@@ -216,6 +216,60 @@
                 rgba(30, 30, 30, 0.9)
             ), url('../images/lutadordevbg4.jpeg');
         }
+        .project-slide {
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        }
+        .project-slide.hidden {
+            opacity: 0;
+            transform: translateX(100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .project-slide.active {
+            opacity: 1;
+            transform: translateX(0);
+            position: relative;
+            pointer-events: all;
+        }
+        .project-slide.prev {
+            opacity: 0;
+            transform: translateX(-100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .tech-tag {
+            transition: all 0.3s ease;
+        }
+        .tech-tag:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .observation-card {
+            transition: transform 0.3s ease;
+        }
+        .observation-card:hover {
+            transform: translateY(-5px);
+        }
+        .project-navigation {
+            transition: all 0.3s ease;
+        }
+        .project-navigation:hover {
+            background-color: rgba(59, 130, 246, 0.1);
+        }
+        .project-image {
+            transition: transform 0.5s ease;
+        }
+        .project-slide:hover .project-image {
+            transform: scale(1.02);
+        }
     </style>
 </head>
 <body class="bg-dark min-h-screen">
@@ -273,45 +327,43 @@
                 Aqui estão alguns dos projetos que desenvolvi ao longo da minha jornada como desenvolvedor.
             </p>
         </div>
-    </section>
+    </section> 
+    <!-- Seção Projetos -->
+     
+            <!-- Controles de navegação -->
+            <div class="flex justify-center items-center space-x-4 mx-3 my-4">
+                
+                <!-- Botões de navegação (esquerda) -->
+                <div class="flex space-x-4">
+                    <button id="prev-project" class="project-navigation text-white p-3 rounded-full">
+                        <i class="fas fa-chevron-left"></i>
+                    </button> 
+                </div>
 
-    <!-- Seção Pesquisa -->
-    <section class="py-8 px-4 bg-darkgray">
-        <div class="container mx-auto">
-            <div class="max-w-2xl mx-auto">
-                <div class="relative">
-                    <input type="text" id="search-input" placeholder="Pesquisar projetos por nome, tecnologia..." class="w-full bg-midgray text-gray-300 rounded-lg p-4 pl-12 border border-lightgray focus:border-accent focus:outline-none search-box">
-                    <div class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400">
-                        <i class="fas fa-search"></i>
-                    </div>
+                <!-- Contador de páginas (centro) -->
+                <div class="flex items-center space-x-2  ">
+                    <span id="current-project" class="text-xl font-bold">1</span>
+                    <span class="text-gray-400"> de </span>
+                    <span id="total-projects" class="text-xl font-bold">6</span>
+                </div> 
+
+                <!-- Botões de navegação (esquerda) -->
+                <div class="flex space-x-4"> 
+                    <button id="next-project" class="project-navigation text-white p-3 rounded-full">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
-            
-            <div class="mt-6 flex flex-wrap justify-center gap-3">
-                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm active" data-filter="all">
-                    Todos
-                </button>
-                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="web">
-                    Web
-                </button>
-                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="mobile">
-                    Mobile
-                </button>
-                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="fullstack">
-                    Fullstack
-                </button>
-                <button class="filter-btn minimalist-border hover:bg-midgray text-white font-light py-2 px-4 rounded transition duration-300 text-sm" data-filter="javascript">
-                    JavaScript
-                </button>
-            </div>
-        </div>
-    </section>
 
-    <!-- Seção Projetos -->
-    <section class="py-16 px-4">
-        <div class="container mx-auto">
-            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Container do projeto em destaque -->
+            <div id="featured-project-container" class="relative h-[600px] bg rounded-xl overflow-hidden shadow-2xl">
                 <!-- Os projetos serão carregados aqui via JavaScript -->
+            </div>
+            
+            <!-- Indicadores de projeto -->
+            <div id="project-indicators" class="flex justify-center mt-6 space-x-2">
+                <!-- Os indicadores serão gerados via JavaScript -->
             </div>
         </div>
     </section>
@@ -335,15 +387,16 @@
         </div>
     </footer>
 
+    
     <script>
         // Dados dos projetos
         const projects = [
             {
                 id: 1,
-                title: "E-commerce Fullstack",
-                description: "Plataforma de e-commerce completa com painel administrativo, sistema de pagamentos e gestão de estoque.",
-                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=E-commerce+Fullstack",
-                technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+                title: "Casa do Menor",
+                description: "Plataforma Administrativa desenvolvida para toda a organização de controle de ponto e financeira da Casa do Menor, focada na experiência do usuário e performance.",
+                image: "../images/projetosfotos/Casadomenor/casa-do-menor- (1).png",
+                technologies: ["Laravel", "DomPDF", "JsDelivr", "APIRESTFull", "TailwindCSS", "JWT"],
                 tags: ["web", "fullstack", "javascript"],
                 projectLink: "#",
                 githubLink: "#",
@@ -355,15 +408,22 @@
                     {
                         text: "Integração com API de pagamentos foi desafiadora mas resultou em uma experiência de usuário excelente.",
                         date: "2023-04-22"
+                    },
+                    {
+                        text: "Sistema de recomendação de produtos aumentou as vendas em 15%.",
+                        date: "2023-06-10"
                     }
-                ]
+                ],
+                status: "Completo",
+                duration: "4 meses",
+                team: "3 desenvolvedores"
             },
             {
                 id: 2,
                 title: "App de Gestão Financeira",
-                description: "Aplicativo mobile para controle de finanças pessoais com gráficos e relatórios detalhados.",
-                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=App+Finanças",
-                technologies: ["React Native", "Firebase", "Chart.js"],
+                description: "Aplicativo mobile para controle de finanças pessoais com gráficos interativos, relatórios detalhados e sincronização em nuvem. Focado em simplicidade e usabilidade.",
+                image: "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=App+Finanças",
+                technologies: ["React Native", "Firebase", "Chart.js", "Redux", "Expo"],
                 tags: ["mobile", "javascript"],
                 projectLink: "#",
                 githubLink: "#",
@@ -371,15 +431,22 @@
                     {
                         text: "O uso de gráficos interativos melhorou significativamente a experiência do usuário.",
                         date: "2023-03-10"
+                    },
+                    {
+                        text: "Implementação de notificações push aumentou o engajamento em 30%.",
+                        date: "2023-02-28"
                     }
-                ]
+                ],
+                status: "Em produção",
+                duration: "3 meses",
+                team: "2 desenvolvedores"
             },
             {
                 id: 3,
                 title: "Sistema de Agendamentos",
-                description: "Sistema web para agendamento de serviços com confirmação por e-mail e notificações.",
-                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=Sistema+Agendamentos",
-                technologies: ["Vue.js", "Laravel", "MySQL"],
+                description: "Sistema web para agendamento de serviços com confirmação automática por e-mail, notificações em tempo real e integração com calendários. Ideal para pequenas e médias empresas.",
+                image: "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Sistema+Agendamentos",
+                technologies: ["Vue.js", "Laravel", "MySQL", "WebSockets", "SendGrid"],
                 tags: ["web", "fullstack"],
                 projectLink: "#",
                 githubLink: "#",
@@ -387,15 +454,22 @@
                     {
                         text: "Sistema de notificações em tempo real aumentou a taxa de comparecimento em 25%.",
                         date: "2023-02-18"
+                    },
+                    {
+                        text: "Interface responsiva permitiu uso em dispositivos móveis sem perda de funcionalidade.",
+                        date: "2023-01-30"
                     }
-                ]
+                ],
+                status: "Completo",
+                duration: "5 meses",
+                team: "4 desenvolvedores"
             },
             {
                 id: 4,
                 title: "Dashboard Analytics",
-                description: "Painel de analytics com visualização de dados em tempo real e relatórios personalizáveis.",
-                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=Dashboard+Analytics",
-                technologies: ["React", "Tailwind CSS", "D3.js", "Express"],
+                description: "Painel de analytics com visualização de dados em tempo real, relatórios personalizáveis e exportação de dados. Focado em tomada de decisão baseada em dados.",
+                image: "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Dashboard+Analytics",
+                technologies: ["React", "Tailwind CSS", "D3.js", "Express", "MongoDB"],
                 tags: ["web", "javascript"],
                 projectLink: "#",
                 githubLink: "#",
@@ -403,15 +477,22 @@
                     {
                         text: "Implementação de gráficos complexos com D3.js foi um grande aprendizado.",
                         date: "2023-01-05"
+                    },
+                    {
+                        text: "Otimização de consultas ao banco reduziu o tempo de carregamento em 60%.",
+                        date: "2022-12-20"
                     }
-                ]
+                ],
+                status: "Em desenvolvimento",
+                duration: "6 meses",
+                team: "3 desenvolvedores"
             },
             {
                 id: 5,
                 title: "Rede Social para Developers",
-                description: "Plataforma de networking para desenvolvedores com portfólio integrado e fórum de discussão.",
-                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=Rede+Social+Devs",
-                technologies: ["Angular", "NestJS", "PostgreSQL", "AWS"],
+                description: "Plataforma de networking para desenvolvedores com portfólio integrado, fórum de discussão e sistema de recomendações. Comunidade focada em compartilhamento de conhecimento.",
+                image: "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Rede+Social+Devs",
+                technologies: ["Angular", "NestJS", "PostgreSQL", "AWS", "Docker"],
                 tags: ["web", "fullstack"],
                 projectLink: "#",
                 githubLink: "#",
@@ -419,15 +500,22 @@
                     {
                         text: "A arquitetura em microserviços permitiu escalar a aplicação facilmente.",
                         date: "2022-12-12"
+                    },
+                    {
+                        text: "Sistema de moderação automática reduziu conteúdo inadequado em 80%.",
+                        date: "2022-11-05"
                     }
-                ]
+                ],
+                status: "Completo",
+                duration: "8 meses",
+                team: "5 desenvolvedores"
             },
             {
                 id: 6,
                 title: "App de Entrega de Comida",
-                description: "Aplicativo de delivery com acompanhamento em tempo real e integração com Google Maps.",
-                image: "https://placehold.co/600x400/1E1E1E/3B82F6/png?text=App+Delivery",
-                technologies: ["Flutter", "Node.js", "MongoDB", "Google Maps API"],
+                description: "Aplicativo de delivery com acompanhamento em tempo real, integração com Google Maps e múltiplos métodos de pagamento. Focado em experiência do usuário fluida.",
+                image: "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=App+Delivery",
+                technologies: ["Flutter", "Node.js", "MongoDB", "Google Maps API", "Stripe"],
                 tags: ["mobile", "fullstack"],
                 projectLink: "#",
                 githubLink: "#",
@@ -435,150 +523,141 @@
                     {
                         text: "Integração com API do Google Maps foi crucial para o sucesso do aplicativo.",
                         date: "2022-11-20"
+                    },
+                    {
+                        text: "Sistema de avaliações melhorou a qualidade dos restaurantes parceiros.",
+                        date: "2022-10-15"
                     }
-                ]
+                ],
+                status: "Em produção",
+                duration: "7 meses",
+                team: "6 desenvolvedores"
             }
         ];
 
-        // Função para renderizar os projetos
-        function renderProjects(filter = 'all', searchTerm = '') {
-            const container = document.getElementById('projects-container');
-            container.innerHTML = '';
+        let currentProjectIndex = 0;
+
+        // Função para renderizar o projeto em destaque
+        function renderFeaturedProject(index) {
+            const container = document.getElementById('featured-project-container');
+            const project = projects[index];
             
-            let filteredProjects = filter === 'all' 
-                ? projects 
-                : projects.filter(project => project.tags.includes(filter));
-            
-            // Aplicar pesquisa se houver termo
-            if (searchTerm) {
-                const term = searchTerm.toLowerCase();
-                filteredProjects = filteredProjects.filter(project => 
-                    project.title.toLowerCase().includes(term) ||
-                    project.description.toLowerCase().includes(term) ||
-                    project.technologies.some(tech => tech.toLowerCase().includes(term)) ||
-                    project.tags.some(tag => tag.toLowerCase().includes(term))
-                );
-            }
-            
-            // Atualizar contador
-            document.getElementById('project-count').textContent = filteredProjects.length;
-            
-            if (filteredProjects.length === 0) {
-                container.innerHTML = `
-                    <div class="col-span-full text-center py-10">
-                        <i class="fas fa-search text-4xl text-gray-600 mb-4"></i>
-                        <p class="text-gray-400">Nenhum projeto encontrado.</p>
+            container.innerHTML = `
+                <div class="project-slide active flex flex-col md:flex-row h-full">
+                    <div class="md:w-1/2 h-64 md:h-full overflow-hidden">
+                        <img src="${project.image}" alt="${project.title}" class="project-image w-full h-full object-cover">
                     </div>
-                `;
-                return;
-            }
-            
-            filteredProjects.forEach(project => {
-                const card = document.createElement('div');
-                card.className = 'project-card bg-darkgray rounded-xl overflow-hidden cursor-pointer';
-                card.innerHTML = `
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="${project.image}" alt="${project.title}" class="w-full h-full object-cover">
-                        <div class="absolute top-0 right-0 m-2 flex flex-wrap gap-1">
-                            ${project.tags.map(tag => `<span class="bg-accent text-white text-xs px-2 py-1 rounded">${tag}</span>`).join('')}
+                    <div class="md:w-1/2 p-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-3xl font-bold">${project.title}</h3>
+                                <span class="bg-blue-600 text-white text-sm px-3 py-1 rounded-full">${project.status}</span>
+                            </div>
+                            <p class="text-gray-300 mb-6">${project.description}</p>
+                            
+                            <div class="mb-6 grid grid-cols-2 gap-4">
+                                <div>
+                                    <p class="text-gray-400 text-sm">Duração</p>
+                                    <p class="font-medium">${project.duration}</p>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm">Equipe</p>
+                                    <p class="font-medium">${project.team}</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <h4 class="text-lg font-semibold mb-2">Tecnologias</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    ${project.technologies.map(tech => `
+                                        <span class="tech-tag bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm">${tech}</span>
+                                    `).join('')}
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2">${project.title}</h3>
-                        <p class="text-gray-400 line-clamp-2">${project.description}</p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            ${project.technologies.map(tech => `<span class="bg-lightgray text-gray-300 text-xs px-2 py-1 rounded">${tech}</span>`).join('')}
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h4 class="text-lg font-bold text-white mb-2">Observações</h4>
-                        <div id="observations-${project.id}" class="text-gray-300 space-y-2">
-                            ${project.observations.length > 0 
-                                ? project.observations.map(obs => `
-                                    <div class="bg-midgray p-3 rounded-lg">
+                        
+                        <div>
+                            <h4 class="text-lg font-semibold mb-2">Observações do Projeto</h4>
+                            <div class="space-y-3 max-h-40 overflow-y-auto pr-2">
+                                ${project.observations.map(obs => `
+                                    <div class="observation-card bg-gray-800 p-3 rounded-lg">
                                         <p class="text-sm">${obs.text}</p>
                                         <p class="text-xs text-gray-500 mt-1">${new Date(obs.date).toLocaleDateString('pt-BR')}</p>
                                     </div>
-                                `).join('') 
-                                : '<p class="text-gray-500 italic">Nenhuma observação ainda.</p>'
-                            }
-                        </div>
-                        <div class="mt-4 flex justify-between">
-                            <a href="${project.githubLink}" target="_blank" class="text-gray-400 hover:text-white">
-                                <i class="fab fa-github mr-1"></i> Código
-                            </a>
-                            <a href="${project.projectLink}" target="_blank" class="text-accent hover:text-white">
-                                <i class="fas fa-external-link-alt mr-1"></i> Ver Projeto
-                            </a>
+                                `).join('')}
+                            </div>
+                            
+                            <div class="flex justify-between mt-6">
+                                <a href="${project.githubLink}" target="_blank" class="flex items-center text-gray-400 hover:text-white transition-colors">
+                                    <i class="fab fa-github mr-2"></i> Ver Código
+                                </a>
+                                <a href="${project.projectLink}" target="_blank" class="flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">
+                                    <i class="fas fa-external-link-alt mr-2"></i> Ver Projeto
+                                </a>
+                            </div>
                         </div>
                     </div>
-                `;
-                
-                container.appendChild(card);
+                </div>
+            `;
+            
+            // Atualizar indicadores
+            updateIndicators(index);
+            
+            // Atualizar contador
+            document.getElementById('current-project').textContent = index + 1;
+        }
+
+        // Função para atualizar os indicadores
+        function updateIndicators(activeIndex) {
+            const indicatorsContainer = document.getElementById('project-indicators');
+            indicatorsContainer.innerHTML = '';
+            
+            projects.forEach((_, index) => {
+                const indicator = document.createElement('button');
+                indicator.className = `w-3 h-3 rounded-full ${index === activeIndex ? 'bg-blue-600' : 'bg-gray-600'}`;
+                indicator.addEventListener('click', () => {
+                    currentProjectIndex = index;
+                    renderFeaturedProject(currentProjectIndex);
+                });
+                indicatorsContainer.appendChild(indicator);
             });
+        }
+
+        // Função para navegar para o próximo projeto
+        function nextProject() {
+            currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+            renderFeaturedProject(currentProjectIndex);
+        }
+
+        // Função para navegar para o projeto anterior
+        function prevProject() {
+            currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
+            renderFeaturedProject(currentProjectIndex);
         }
 
         // Inicialização quando o DOM estiver carregado
         document.addEventListener('DOMContentLoaded', function() {
-            // Renderizar projetos inicialmente
-            renderProjects();
+            // Atualizar contador total de projetos
+            document.getElementById('total-projects').textContent = projects.length;
             
-            // Configurar filtros
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const filter = this.getAttribute('data-filter');
-                    
-                    // Atualizar botão ativo
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    // Aplicar filtro e pesquisa
-                    const searchTerm = document.getElementById('search-input').value;
-                    renderProjects(filter, searchTerm);
-                });
+            // Renderizar o primeiro projeto
+            renderFeaturedProject(currentProjectIndex);
+            
+            // Configurar navegação
+            document.getElementById('next-project').addEventListener('click', nextProject);
+            document.getElementById('prev-project').addEventListener('click', prevProject);
+            
+            // Navegação por teclado
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    nextProject();
+                } else if (e.key === 'ArrowLeft') {
+                    prevProject();
+                }
             });
             
-            // Configurar pesquisa
-            document.getElementById('search-input').addEventListener('input', function() {
-                const searchTerm = this.value;
-                const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
-                renderProjects(activeFilter, searchTerm);
-            });
-            
-            // Menu mobile
-            document.getElementById('mobile-menu-button').addEventListener('click', () => {
-                const menu = document.getElementById('mobile-menu');
-                menu.classList.toggle('hidden');
-            });
-            
-            // Fechar menu ao clicar em um link
-            document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    document.getElementById('mobile-menu').classList.add('hidden');
-                });
-            });
-            
-            // Barra de progresso
-            window.addEventListener('scroll', () => {
-                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (winScroll / height) * 100;
-                document.getElementById('progress-bar').style.width = scrolled + '%';
-            });
-            
-            // Animação de revelação ao scroll
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('section-visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            document.querySelectorAll('.section-hidden').forEach((section) => {
-                observer.observe(section);
-            });
+            // Auto-avanço (opcional - descomente se quiser)
+            // setInterval(nextProject, 8000);
         });
     </script>
 </body>
