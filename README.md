@@ -42,10 +42,9 @@ Para manter o código limpo e padronizado, utilize:
 
 ## 📦 Implantação
 
-A maneira mais simples de implantar é utilizando o **GitHub Pages** ou serviços como **Vercel** e **Netlify**:  
+A maneira mais simples de implantar é utilizando o **GitHub Pages** ou serviços como **Vercel** que foi utilizado para esse projeto:  
 
-
-Depois configure o serviço de hospedagem desejado e pronto, seu portfólio estará online.  
+Depois configure o serviço de hospedagem desejado e pronto, seu portfólio estará online, este por exemplo, foi utilizando a **GoDaddy**.  
 
 ## 🛠️ Construído com
 
