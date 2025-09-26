@@ -1,7 +1,6 @@
 # Portfólio
 
-Este projeto é um modelo de portfólio minimalista, desenvolvido com **HTML básico e Tailwind CSS**, com foco em **eficiência, responsividade e simplicidade**.  
-Ideal para apresentar projetos pessoais ou profissionais sem depender de frameworks complexos.  
+Este projeto é um modelo de portfólio minimalista, desenvolvido com **HTML, JS e Tailwind CSS**, com foco em **eficiência, responsividade e simplicidade**.  
 
 ## 🚀 Começando
 
@@ -62,20 +61,16 @@ Se quiser sugerir melhorias, abra uma **issue** ou envie um **pull request**.
 ## 📌 Versão
 
 Estamos utilizando **[Git](http://github.com/)** para controle de versão.  
-Consulte as [tags do repositório](https://github.com/usuario/portfolio/tags) para ver versões disponíveis.  
+Consulte as [tags do repositório](https://github.com/santoswentz/portfolio/tags) para ver versões disponíveis.  
 
 ## ✒️ Autores
 
-* **Eduardo Wentz** – Desenvolvimento – [santoswentz](https://github.com/santoswentz)   
-## 📄 Licença
-
-Este projeto está sob a licença **MIT** – veja o arquivo [LICENSE.md](LICENSE.md) para mais detalhes.  
+* **Eduardo Wentz** – Desenvolvimento – [santoswentz](https://github.com/santoswentz)    
 
 ## 🎁 Agradecimentos
 
 * Inspiração de portfólios open-source  
-* Tailwind CSS pela simplicidade  
-* Comunidade Dev que compartilha conhecimento diariamente 🚀  
+* Tailwind CSS pela simplicidade   
 
 ---
 
