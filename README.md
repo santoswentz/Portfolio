@@ -52,7 +52,7 @@ Ferramentas e tecnologias utilizadas:
 
 * [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML) - Estrutura da página  
 * [Tailwind CSS](https://tailwindcss.com/) - Estilização responsiva e eficiente  
-* [GitHub Pages](https://pages.github.com/) - Hospedagem gratuita  
+* [Vercel](https://vercel.com/) - Hospedagem gratuita  
 
 ## 🖇️ Contribuindo
 
@@ -61,14 +61,12 @@ Se quiser sugerir melhorias, abra uma **issue** ou envie um **pull request**.
 
 ## 📌 Versão
 
-Estamos utilizando **[SemVer](http://semver.org/)** para controle de versão.  
+Estamos utilizando **[Git](http://github.com/)** para controle de versão.  
 Consulte as [tags do repositório](https://github.com/usuario/portfolio/tags) para ver versões disponíveis.  
 
 ## ✒️ Autores
 
-* **Eduardo Wentz** – Desenvolvimento inicial – [seuperfil](https://github.com/seuperfil)  
-* **Colaboradores** – Apoio e melhorias contínuas  
-
+* **Eduardo Wentz** – Desenvolvimento – [santoswentz](https://github.com/santoswentz)   
 ## 📄 Licença
 
 Este projeto está sob a licença **MIT** – veja o arquivo [LICENSE.md](LICENSE.md) para mais detalhes.  
