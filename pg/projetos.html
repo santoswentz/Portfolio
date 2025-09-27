@@ -583,7 +583,7 @@
 
             
             <!-- Container do projeto em destaque -->
-            <div id="featured-project-container" class="relative h-[600px] bg rounded-xl overflow-hidden shadow-2xl">
+            <div id="featured-project-container" class="relative h-[675px] bg rounded-xl overflow-hidden shadow-2xl">
                 <!-- Os projetos serão carregados aqui via JavaScript -->
             </div>
             
@@ -619,47 +619,81 @@
         const projects = [
             {
                 id: 1,
-                title: "Casa do Menor",
+                title: "Casa do Menor - Site Administrativo para ONG ",
                 description: "Plataforma Administrativa desenvolvida para toda a organização de controle de ponto e financeira da Casa do Menor, focada na experiência do usuário e performance.",
                 image: "../images/projetosfotos/Casadomenor/casa-do-menor- (2).png",
                 images: [
                     "../images/projetosfotos/Casadomenor/casa-do-menor- (1).png",
                     "../images/projetosfotos/Casadomenor/casa-do-menor- (2).png",
-                    "../images/projetosfotos/Casadomenor/casa-do-menor- (3).png"
+                    "../images/projetosfotos/Casadomenor/casa-do-menor- (3).png",
+                    "../images/projetosfotos/Casadomenor/casa-do-menor- (4).png",
+                    "../images/projetosfotos/Casadomenor/casa-do-menor- (5).png",
+                    "../images/projetosfotos/Casadomenor/casa-do-menor- (6).png",
+                    "../images/projetosfotos/Casadomenor/casa-do-menor- (7).png"
                 ],
-                technologies: ["Laravel", "DomPDF", "JsDelivr", "APIRESTFull", "TailwindCSS" ],
-                tags: ["web", "fullstack", "javascript"],
+                technologies: ["Laravel", "DomPDF", "JsDelivr", "API RESTFull", "TailwindCSS" ],
+                tags: ["Tailwind", "Front-End", "JavaScript"],
                 projectLink: "#",
                 githubLink: "#",
                 observations: [
                     {
-                        text: "Implementei um sistema de cache que melhorou o desempenho em 40%.",
+                        text: "Implementação de sistema de components junto a Tailwind CSS que otimizou a Aplicação.",
                         date: "2023-05-15"
-                    },
-                    {
-                        text: "Integração com API de pagamentos foi desafiadora mas resultou em uma experiência de usuário excelente.",
-                        date: "2023-04-22"
-                    },
+                    }, 
                     {
                         text: "Sistema de recomendação de produtos aumentou as vendas em 15%.",
                         date: "2023-06-10"
                     }
                 ],
                 status: "Completo",
-                duration: "4 meses",
-                team: "3 desenvolvedores"
+                duration: "3 meses",
+                team: "1 Desenvolvedor Front-end"
             },
             {
                 id: 2,
-                title: "Consumo de API do Rick and Morty",
-                description: "Site web que consome a API pública do Rick and Morty, exibindo personagens. Projeto focado em aprendizado de consumo de APIs RESTful e UI.",
-                image: "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=App+Finanças",
+                title: "Rio Tendas - Site Administrativo para locação de tendas",
+                description: "Plataforma Interna para funcionarios do Rio Tendas, Dashboard com dados reais. Aplicação focada em organização da contabilidade e logistica.",
+                image: "../images/projetosfotos/Rio-Tendas/rio-tendas (1).png",
                 images: [
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=App+Finanças+1",
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=App+Finanças+2",
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=App+Finanças+3"
+                    "../images/projetosfotos/Rio-Tendas/rio-tendas (1).png",
+                    "../images/projetosfotos/Rio-Tendas/rio-tendas (2).png",
+                    "../images/projetosfotos/Rio-Tendas/rio-tendas (3).png",
+                    "../images/projetosfotos/Rio-Tendas/rio-tendas (4).png",
+                    "../images/projetosfotos/Rio-Tendas/rio-tendas (1).jpeg"
                 ],
-                technologies: ["React Native", "Firebase", "Chart.js", "Redux", "Expo"],
+                technologies: ["Laravel", "DomPDF", "JsDelivr", "API RESTFull", "TailwindCSS", "OpenSSL" ],
+                tags: ["Tailwind", "Front-End", "JavaScript"],
+                projectLink: "#",
+                githubLink: "#",
+                observations: [ 
+                    {
+                        text: "Integração de Qr code com Session Timeout e Encryptação foi desafiadora mas resultou em uma experiência excelente para o cliente.",
+                        date: "2023-04-22"
+                    },
+                    {
+                        text: "Quantidade de validações financeiras foram desafiadoras, até criar padronizações de validações em JavaScript em tempo real.",
+                        date: "2022-11-05"
+                    }, 
+                    {
+                        text: "Interface responsiva permitiu uso em dispositivos móveis sem perda de nenhuma funcionalidade.",
+                        date: "2023-01-30"
+                    }
+                ],
+                status: "Completo",
+                duration: "3 meses",
+                team: "1 Desenvolvedor Front-end"
+            }, 
+            
+            {
+                id: 5,
+                title: "Rick and Morty - Consumo de API pública",
+                description: "Site web que consome a API pública do Rick and Morty, exibindo personagens. Projeto focado em aprendizado de consumo de APIs RESTful e UI.",
+                image: "../images/projetosfotos/Rick-And-Morty/rick-and-morty1.png",
+                images: [
+                    "../images/projetosfotos/Rick-And-Morty/rick-and-morty1.png",
+                    "../images/projetosfotos/Rick-And-Morty/rick-and-morty2.png"
+                ],
+                technologies: ["React Native", "Laravel", "API RESTFull"],
                 tags: ["mobile", "javascript"],
                 projectLink: "#",
                 githubLink: "#",
@@ -673,122 +707,73 @@
                         date: "2023-02-28"
                     }
                 ],
-                status: "Em produção",
-                duration: "3 meses",
-                team: "2 desenvolvedores"
+                status: "Completo",
+                duration: "1 Dia",
+                team: "1 Desenvolvedor"
             },
             {
                 id: 3,
-                title: "Sistema de Agendamentos",
+                title: "Barbearia de Rua - Sistema de Agendamentos para Barbearia de Periferia",
                 description: "Sistema web para agendamento de serviços com confirmação automática por e-mail, notificações em tempo real e integração com calendários. Ideal para pequenas e médias empresas.",
-                image: "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Sistema+Agendamentos",
+                image: "../images/projetosfotos/Barbearia-de-Rua/barbeariaderua-index-1.png",
                 images: [
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Sistema+Agendamentos+1",
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Sistema+Agendamentos+2",
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Sistema+Agendamentos+3"
+                    "../images/projetosfotos/Barbearia-de-Rua/barbeariaderua-index-1.png", 
+                    "../images/projetosfotos/Barbearia-de-Rua/barbeariaderua-agendamento.png", 
+                    "../images/projetosfotos/Barbearia-de-Rua/barbeariaderua-index-2.png", 
+                    "../images/projetosfotos/Barbearia-de-Rua/barbeariaderua-indexadmin.png", 
+                    "../images/projetosfotos/Barbearia-de-Rua/barbeariaderua-minha-conta.png", 
+                    "../images/projetosfotos/Barbearia-de-Rua/barbeariaderuacrud-1.png",  
+                    "../images/projetosfotos/Barbearia-de-Rua/barbeariaderuacrud-2.png",  
+                    "../images/projetosfotos/Barbearia-de-Rua/barbeariaderuacrud-3.png",  
+                    "../images/projetosfotos/Barbearia-de-Rua/barbeariaderuacrud-4.png"
                 ],
-                technologies: ["Vue.js", "Laravel", "MySQL", "WebSockets", "SendGrid"],
-                tags: ["web", "fullstack"],
+                technologies: ["Python", "Flask", "SQLite"],
+                tags: ["Flask", "Full-Stack", "SQLite"],
                 projectLink: "#",
                 githubLink: "#",
-                observations: [
+                observations: [ 
                     {
-                        text: "Sistema de notificações em tempo real aumentou a taxa de comparecimento em 25%.",
-                        date: "2023-02-18"
-                    },
-                    {
-                        text: "Interface responsiva permitiu uso em dispositivos móveis sem perda de funcionalidade.",
-                        date: "2023-01-30"
-                    }
-                ],
-                status: "Completo",
-                duration: "5 meses",
-                team: "4 desenvolvedores"
-            },
-            {
-                id: 4,
-                title: "Dashboard Analytics",
-                description: "Painel de analytics com visualização de dados em tempo real, relatórios personalizáveis e exportação de dados. Focado em tomada de decisão baseada em dados.",
-                image: "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Dashboard+Analytics",
-                images: [
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Dashboard+Analytics+1",
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Dashboard+Analytics+2",
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Dashboard+Analytics+3"
-                ],
-                technologies: ["React", "Tailwind CSS", "D3.js", "Express", "MongoDB"],
-                tags: ["web", "javascript"],
-                projectLink: "#",
-                githubLink: "#",
-                observations: [
-                    {
-                        text: "Implementação de gráficos complexos com D3.js foi um grande aprendizado.",
-                        date: "2023-01-05"
-                    },
-                    {
-                        text: "Otimização de consultas ao banco reduziu o tempo de carregamento em 60%.",
-                        date: "2022-12-20"
+                        text: "Desafio em integrar múltiplos calendários foi superado com sucesso, garantindo sincronização perfeita.",
+                        date: "2023-03-05"
                     }
                 ],
                 status: "Em desenvolvimento",
-                duration: "6 meses",
-                team: "3 desenvolvedores"
+                duration: "1 Mês",
+                team: "1 Desenvolvedor"
             },
             {
-                id: 5,
-                title: "Rede Social para Developers",
-                description: "Plataforma de networking para desenvolvedores com portfólio integrado, fórum de discussão e sistema de recomendações. Comunidade focada em compartilhamento de conhecimento.",
-                image: "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Rede+Social+Devs",
+                id: 4,
+                title: "Acessibility - Plataforma de Imóveis Inclusiva",
+                description: "Projeto de competição estudantil destinado a inclusão de pessoas com deficiencia fisica.",
+                image: "../images/projetosfotos/Acessibility/pesquisarsendousado.png",
                 images: [
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Rede+Social+Devs+1",
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Rede+Social+Devs+2",
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=Rede+Social+Devs+3"
+                    "../images/projetosfotos/Acessibility/acessibility-cadastro.png",
+                    "../images/projetosfotos/Acessibility/acessibility-index-1.png",
+                    "../images/projetosfotos/Acessibility/acessibility-index-2.png ",
+                    "../images/projetosfotos/Acessibility/acessibility-index-3.png ",
+                    "../images/projetosfotos/Acessibility/acessibility-login.png ",
+                    "../images/projetosfotos/Acessibility/cadastro-imovel-1.png ",
+                    "../images/projetosfotos/Acessibility/cadastro-imovel-2.png ",
+                    "../images/projetosfotos/Acessibility/imovel-solo-1.png ",
+                    "../images/projetosfotos/Acessibility/imovel-solo-2.png ",
+                    "../images/projetosfotos/Acessibility/pesquisarimoveis.png ",
+                    "../images/projetosfotos/Acessibility/pesquisarsendousado.png ",
+
                 ],
-                technologies: ["Angular", "NestJS", "PostgreSQL", "AWS", "Docker"],
-                tags: ["web", "fullstack"],
+                technologies: ["JavaScript"],
+                tags: ["Front-end", "JavaScript"],
                 projectLink: "#",
                 githubLink: "#",
                 observations: [
                     {
-                        text: "A arquitetura em microserviços permitiu escalar a aplicação facilmente.",
-                        date: "2022-12-12"
-                    },
-                    {
-                        text: "Sistema de moderação automática reduziu conteúdo inadequado em 80%.",
-                        date: "2022-11-05"
-                    }
+                        text: "Projeto inicial, feito para apresentação para o Fecomercio RS.",
+                        date: "2023-07"
+                    }  
                 ],
-                status: "Completo",
-                duration: "8 meses",
-                team: "5 desenvolvedores"
-            },
-            {
-                id: 6,
-                title: "App de Entrega de Comida",
-                description: "Aplicativo de delivery com acompanhamento em tempo real, integração com Google Maps e múltiplos métodos de pagamento. Focado em experiência do usuário fluida.",
-                image: "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=App+Delivery",
-                images: [
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=App+Delivery+1",
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=App+Delivery+2",
-                    "https://placehold.co/800x500/1E1E1E/3B82F6/png?text=App+Delivery+3"
-                ],
-                technologies: ["Flutter", "Node.js", "MongoDB", "Google Maps API", "Stripe"],
-                tags: ["mobile", "fullstack"],
-                projectLink: "#",
-                githubLink: "#",
-                observations: [
-                    {
-                        text: "Integração com API do Google Maps foi crucial para o sucesso do aplicativo.",
-                        date: "2022-11-20"
-                    },
-                    {
-                        text: "Sistema de avaliações melhorou a qualidade dos restaurantes parceiros.",
-                        date: "2022-10-15"
-                    }
-                ],
-                status: "Em produção",
-                duration: "7 meses",
-                team: "6 desenvolvedores"
-            }
+                status: "Em desenvolvimento",
+                duration: "1 meses",
+                team: "2 desenvolvedores"
+            }, 
         ];
 
         let currentProjectIndex = 0;
