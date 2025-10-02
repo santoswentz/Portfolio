@@ -1,0 +1,1325 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada da Disciplina | Transforme disciplina em hábito</title>
+    
+    <!-- Tailwind CSS -->
+     <link rel="stylesheet" href="src/css/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    // Cores principais da paleta
+                    primary: '#737963',        // Verde acinzentado - cor primária principal
+                    secondary: '#664231',      // Marrom escuro - cor secundária para contrastes
+                    neutralLight: '#fbfcfa     ',   // Cinza claro - para fundos claros e elementos neutros
+                    neutralDark: '#271f19',    // Preto acastanhado - para textos escuros e elementos escuros
+                    accent: '#795e43',         // Marrom médio - cor de destaque para botões, links, etc.
+                    accentLight: '#737963',    // Verde acinzentado - cor de destaque clara (repetida da primary)
+                },
+                fontFamily: {
+                    // Famílias de fontes personalizadas
+                    'sans': ['Quicksand', 'sans-serif'],      // Fonte sem serifa para textos gerais
+                    'serif': ['RichRich', 'serif'],           // Fonte serifada para títulos e destaques
+                },
+                animation: {
+                    // Animações customizadas
+                    'scale-blur-in': 'scaleBlurIn 0.75s ease-out forwards',        // Animação de entrada com escala e blur
+                    'bouncing-steps': 'bouncingSteps 2s ease-in-out forwards',     // Animação de passos saltitantes
+                    'shine': "shine 4s linear infinite",
+                }
+            }
+        }
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+
+    <link rel="icon" type="image/x-icon" href="src/img/favicon.png">
+</head>
+
+<body class="bg-neutralLight text-neutralDark">
+    <!-- Cabeçalho (Hero Section) -->
+    <header class="gradient-bg py-20 md:py-28 section-divider section-divider-limit">
+        <div class="container mx-auto px-6 md:px-12 max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center gap-20">
+                <div class="md:w-3/5 mb-12 md:mb-0 motion-initial-scale-blur animate-scale-blur-in">
+                    <div class="inline-block border border-accentLight/20 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+                        5 meses para aprender a ser discípula de suas regras
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-5xl font-serif font-bold mb-6 leading-tight">
+                        Jornada da Disciplina: <span class="text-neutralDark">Um caminho em áudios para fortalecer sua mente, criar disciplina duradoura e sustentar escolhas que ressoam contigo</span>
+                    </h1>
+                    <p class="text-xl text-primary mb-8 leading-relaxed">
+                        Um acompanhamento exclusivo em áudios diários, para transformar disciplina em hábito e sustentar escolhas que importam de verdade.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                    <!-- Botão principal -->
+                    <a href="https://pay.hotmart.com/D77689968B?bid=1759240605955" target="_blank" rel="noopener noreferrer"
+                        class="relative overflow-hidden w-full sm:w-auto sm:min-w-[260px] lg:min-w-[300px] bg-secondary hover:bg-secondary/90 text-white font-semibold py-4 px-8 rounded-lg text-center transition duration-400">
+                        <span class="relative z-10">Quero participar da Jornada</span>
+
+                        <!-- Brilho animado -->
+                        <span class="absolute top-0 left-[-150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/60 to-transparent skew-x-[-20deg] animate-shine"></span>
+                    </a>
+
+                    <!-- Botão secundário -->
+                    <a href="#como-funciona"
+                        class="border border-accentLight hover:border-primary text-primary font-medium py-4 px-8 rounded-lg transition duration-300 text-center">
+                        Saiba mais
+                    </a>
+                    </div>
+
+                </div>
+                 
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg max-w-md border border-accentLight">
+                        <div class="text-center">
+                            <div class="w-20 h-20 bg-accentLight/30 rounded-full flex items-center justify-center mx-auto mb-6 motion-initial-svg animate-bouncing-svg">
+                                <!-- Aplica a animação apenas no SVG -->
+                                <svg xmlns="http://www.w3.org/2000/svg" 
+                                    class="h-10 w-10 text-primary  " 
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <p class="text-lg font-serif italic text-primary mb-4">
+                                "Cada dia que você deixa de treinar, de se dedicar a busca de disciplina, significa um dia mais distante da realização de seus sonhoss"
+                            </p>
+                            <p class="text-sm text-accentLight">
+                                James C. Maxwell
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header> 
+
+    <!-- Identificação com o Público (Dor x Desejo) -->
+    <section class="py-20 bg-white section-divider  ">
+        <div class="container mx-auto px-6 md:px-12 max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Você se identifica com alguma dessas situações?</h2>
+                <p class="text-xl text-primary max-w-2xl mx-auto">Reconhecer os padrões é o primeiro passo para transformá-los</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-up-blur">
+                <div class="bg-neutralLight p-8 rounded-xl border border-accentLight">
+                    <h3 class="text-xl font-semibold mb-6 text-neutralDark ">Padrões comuns</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-accentLight/30 rounded-full p-2 mr-4 mt-1  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary " viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <span class="text-primary  ">Começar cheia de motivação e logo desistir</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-accentLight/30 rounded-full p-2 mr-4 mt-1 ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary " viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <span class="text-primary ">Culpar-se por não conseguir manter hábitos saudáveis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-accentLight/30 rounded-full p-2 mr-4 mt-1  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <span class="text-primary ">Sentir que a disciplina não é para você</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-primary text-white p-8 rounded-xl fade-up-blur">
+                    <h3 class="text-xl font-semibold mb-6 ">A perspectiva transformadora</h3>
+                    <p class="text-lg mb-6 ">
+                        "Quero te dizer uma coisa: a disciplina não é um dom. É um músculo que pode ser treinado."
+                    </p>
+                    <p class="text-accentLight ">
+                        E é exatamente isso que vamos fazer juntas na Jornada da Disciplina - transformar a disciplina em um hábito natural e sustentável.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- O que é a Jornada da Disciplina -->
+    <section id="como-funciona" class="py-20 bg-neutralLight section-divider">
+        <div class="container mx-auto px-6 md:px-12 max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Metodologia Comprovada</h2>
+                <p class="text-xl text-primary max-w-2xl mx-auto">Um processo estruturado para resultados duradouros</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12 items-stretch">
+                
+                <!-- Coluna do Conteúdo -->
+                <div class="lg:w-3/5 flex fade-up-blur">
+                    <div class="bg-white rounded-2xl shadow-sm border border-accentLight p-8 md:p-12 w-full flex flex-col">
+                        
+                        <div class="flex flex-col md:flex-row items-center mb-10">
+                            <div class="md:w-1/3 mb-8 md:mb-0">
+                                <div class="bg-primary text-white font-semibold text-xl py-4 px-6 rounded-lg text-center">
+                                    Duração: 5 meses
+                                </div>
+                            </div>
+                            <div class="md:w-2/3 md:pl-8">
+                                <p class="text-xl text-primary ">
+                                    Durante <span class="font-semibold">10 dias de cada mês</span>, você receberá áudios exclusivos no WhatsApp com:
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                            <div class="flex items-start p-4 rounded-lg border border-accentLight hover:shadow-md transition-shadow duration-300">
+                                <div class="bg-accentLight/20 p-3 rounded-lg mr-4">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-neutralDark mb-1">Insights de livros</h4>
+                                    <p class="text-primary text-sm">Princípios científicos aplicáveis ao desenvolvimento pessoal</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start p-4 rounded-lg border border-accentLight hover:shadow-md transition-shadow duration-300">
+                                <div class="bg-accentLight/20 p-3 rounded-lg mr-4">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-neutralDark mb-1">Meditações guiadas</h4>
+                                    <p class="text-primary text-sm">Práticas para desenvolver foco e presença mental</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start p-4 rounded-lg border border-accentLight hover:shadow-md transition-shadow duration-300">
+                                <div class="bg-accentLight/20 p-3 rounded-lg mr-4">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-neutralDark mb-1">Tarefas práticas</h4>
+                                    <p class="text-primary text-sm">Exercícios para implementação imediata no dia a dia</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start p-4 rounded-lg border border-accentLight hover:shadow-md transition-shadow duration-300">
+                                <div class="bg-accentLight/20 p-3 rounded-lg mr-4">
+                                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-neutralDark mb-1">Ferramentas terapêuticas</h4>
+                                    <p class="text-primary text-sm">Técnicas validadas para mudança de comportamento</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-neutralLight p-6 rounded-xl border border-accentLight mt-auto">
+                            <p class="text-lg text-center text-primary">
+                                <span class="font-semibold">O restante do mês será para aplicar e consolidar o aprendizado.</span> Você terá um treino mental, constante e gentil, para nunca mais depender apenas da motivação.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna da Foto -->
+                <div class="lg:w-2/5 flex fade-up-blur">
+                    <div class="relative w-full flex flex-col">
+                        <div class="bg-white   shadow-sm rounded-2xl overflow-hidden border border-accentLight flex-1 flex">
+                            <img src="src/img/imgdaniprofissional.jpg" alt="Dani Adami - Psicóloga" 
+                                class="w-full h-full rounded-xl object-cover shadow-md">
+                        </div>
+                        <div class="text-center mt-4">
+                            <h3 class="font-serif font-semibold text-lg text-neutralDark">Dani Adami</h3>
+                            <p class="text-sm text-primary">Psicóloga Clínica • 20 anos de experiência</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- O que você vai viver em cada módulo -->
+    <section class="py-20 bg-white section-divider ">
+        <div class="container mx-auto px-6 md:px-12 max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Estrutura do Programa</h2>
+                <p class="text-xl text-primary max-w-2xl mx-auto">Um caminho progressivo para o desenvolvimento da disciplina</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center align-items-center ">
+                <!-- Módulo 1 -->
+                <div class="bg-white rounded-xl border border-accentLight overflow-hidden transition-all duration-300 hover:shadow-lg fade-up-blur ">
+                    <div class="bg-primary text-white py-5 px-6">
+                        <div class="text-sm font-medium   mb-1">Módulo 1</div>
+                        <h3 class="text-xl font-bold">Fundamentos da Disciplina</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-primary mb-4">Compreensão dos princípios neurocientíficos da disciplina e estabelecimento de bases sólidas para a mudança.</p>
+                        <ul class="space-y-2 text-sm text-primary">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Disciplina: o alicerce da transformação</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Planejamento que funciona na vida real</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Treinamento: a mente como músculo</span>
+                            </li>
+                            
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Foco: energia direcionada</span>
+                            </li>
+                            
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Merecimento e recompensa</span>
+                            </li>
+                            
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Espaço e tempo: criando ambiente fértil</span>
+                            </li>
+                            
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Cronograma e constância</span>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Módulo 2 -->
+                <div class="bg-white rounded-xl border border-accentLight overflow-hidden transition-all duration-300 hover:shadow-lg  fade-up-blur">
+                    <div class="bg-accentLight text-white py-5 px-6">
+                        <div class="text-sm font-medium   mb-1">Módulo 2</div>
+                        <h3 class="text-xl font-bold">Calma e Autocompaixão no Caminho</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-primary mb-4">Identificação de padrões de autossabotagem e desenvolvimento de autoconsciência para superação.</p>
+                        <ul class="space-y-2 text-sm text-primary">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Calma: o poder da pausa</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Leveza para seguir sem peso</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Tolerância à frustração: aprendendo com os tropeços</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Solitude: encontrar força no silêncio</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Rotina como aliada da estabilidade</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Saúde como base da disciplina </span>                         
+                            </li>
+
+
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Equilíbrio entre fazer e descansar</span>
+                            </li>
+
+                            
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Delegar para aliviar sobrecargas</span>
+                            </li>
+
+                            
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Autocompaixão: ser amiga de si mesma</span>
+                            </li>
+                        </ul>
+                         
+                    </div>
+                </div>
+                
+                <!-- Módulo 3 -->
+                <div class="bg-white rounded-xl border border-accentLight overflow-hidden transition-all duration-300 hover:shadow-lg fade-up-blur">
+                    <div class="bg-primary text-white py-5 px-6">
+                        <div class="text-sm font-medium   mb-1">Módulo 3</div>
+                        <h3 class="text-xl font-bold">Clareza e Inteligência Emocional</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-primary mb-4">Aprendizado de técnicas práticas para implementar hábitos e superar obstáculos no dia a dia.</p>
+                        <ul class="space-y-2 text-sm text-primary">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Clareza para enxergar o caminho</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Flexibilidade diante dos imprevistos</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Autocontrole: força nas escolhas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Autenticidade para viver quem você é</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Autoresponsabilidade: assumir o protagonismo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Conhecimento que gera transformação</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Atitude: tirar do papel e agir</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Empatia: compreender a si e ao outro</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Inteligência emocional no dia a dia</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Aprendizagem contínua como estilo de vida</span>
+                            </li>
+                        </ul>
+
+
+ 
+
+
+                    </div>
+                </div>
+                
+                <!-- Módulo 4 -->
+                <div class="bg-white rounded-xl border border-accentLight overflow-hidden transition-all duration-300 hover:shadow-lg fade-up-blur">
+                    <div class="bg-accentLight text-white py-5 px-6">
+                        <div class="text-sm font-medium   mb-1">Módulo 4</div>
+                        <h3 class="text-xl font-bold">Resiliência e Prioridades</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-primary mb-4">Fortalecimento dos novos hábitos e integração da disciplina de forma natural no cotidiano.</p>
+                        <ul class="space-y-2 text-sm text-primary">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Prioridade: o que realmente importa</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Atenção plena para escolhas conscientes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Tempo como recurso valioso</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Superação dos próprios limites</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Autoanálise para crescer com consciência</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Resiliência: força nas adversidades</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Alívio: aprender a soltar o peso</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Positividade que fortalece a jornada</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Autocuidado como pilar da disciplina</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span>Proatividade: agir antes da desculpa</span>
+                            </li>
+                        </ul>
+                    </div>
+ 
+                </div>
+                
+                <!-- Módulo 5 -->
+                <div class="bg-white rounded-xl border border-accentLight overflow-hidden transition-all duration-300 hover:shadow-lg fade-up-blur">
+                    <div class="bg-primary text-white py-5 px-6">
+                        <div class="text-sm font-medium   mb-1">Módulo 5</div>
+                        <h3 class="text-xl font-bold">Consolidação e Amor Próprio</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-primary mb-4">Desenvolvimento de autonomia para manter os resultados a longo prazo e enfrentar novos desafios.</p>
+                        <ul class="space-y-2 text-sm text-primary">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg> 
+                                <span> Iniciar o dia com intenção </span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg> 
+                                <span> Só por hoje: a força do presente </span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span> Saúde como escolha diária </span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span> Técnica da atenção plena </span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span> Amor que sustenta vínculos </span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg> 
+                                <span> Amor próprio que fortalece </span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span> Hábitos bons: cultivar o que constrói </span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg> 
+                                <span> Hábitos ruins: reconhecer e transformar </span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span> Comparação não: cada jornada é única </span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span> Pendências: fechar ciclos abertos </span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span> Celular longe: presença de verdade </span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-accentLight mr-2 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <span> Recompensa consciente para manter a constância </span>
+                            </li>
+                        </ul>
+                    </div>  
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Para quem é a Jornada -->
+    <section class="py-20 bg-neutralLight section-divider ">
+        <div class="container mx-auto px-6 md:px-12 max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Para Quem é a Jornada</h2>
+                <p class="text-xl text-primary max-w-2xl mx-auto">Um programa desenvolvido especificamente para mulheres que desejam transformação real</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 fade-up-blur">
+                <div class="bg-transparent ">
+                    <h3 class="text-2xl font-semibold mb-6 text-neutralDark">Este programa é para você se já se perguntou:</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <div class="bg-accentLight/30 rounded-full p-2 mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="font-medium text-neutralDark">“Por que eu avanço e depois paro?”</span> 
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="bg-accentLight/30 rounded-full p-2 mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="font-medium text-neutralDark">"Por que eu me comprometo e não consigo realizar?"</span> 
+                            </div>
+                        </li> 
+                        <li class="flex items-center">
+                            <div class="bg-accentLight/30 rounded-full p-2 mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="font-medium text-neutralDark">“Por que eu sei que posso mais, mas algo me trava?”</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h2 class="text-2x1 font-semibold my-5 text-neutralDark pt-2 ">Talvez você sinta que:</h2><ul class="space-y-4">
+
+                        <li class="flex items-center">
+                            <div class="bg-accentLight/30 rounded-full p-2 mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="font-medium text-neutralDark">Vive em ciclos de motivação e desistência.</span> 
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="bg-accentLight/30 rounded-full p-2 mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="font-medium text-neutralDark">A ansiedade, o medo e a insegurança falam mais alto.</span> 
+                            </div>
+                        </li>
+                        <li class="flex items-center">
+                            <div class="bg-accentLight/30 rounded-full p-2 mr-4 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="font-medium text-neutralDark">A desorganização e a procrastinação roubam sua energia.</span> 
+                            </div>
+                        </li> 
+
+                        <li class="flex items-center justify-center"> 
+                            <div>
+                                <span class="font-semibold text-secondary">Você sabe que não está usando todo o seu potencial.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-neutralLight p-8 rounded-2xl shadow-sm border border-accentLight flex flex-col fade-up-blur">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-accentLight/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-neutralDark">Essa é a sua chance!</h3>
+                    </div>
+
+                    <ul class="space-y-4 m-auto text-left">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-3 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-neutralDark">Algo dentro de você — na sua vida, nos seus relacionamentos, na sua rotina — precisa mudar.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-3 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-neutralDark">Isso não é falta de força de vontade. É o teu emocional pedindo atenção.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-3 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-neutralDark">Aqui começa a tua chance de destravar, reprogramar a mente e transformar tua história.</span>
+                        </li>
+                    </ul>
+
+                    <!-- Botão fora do UL e empurrado para baixo -->
+                    <a href="https://pay.hotmart.com/D77689968B?bid=1759240605955" 
+                    class="mt-auto block w-full bg-secondary hover:bg-accent text-white font-semibold py-4 px-4 rounded-lg text-center transition duration-300 relative overflow-hidden"> <!----add relative overflow-hidden no <A> e dps colocar o span animado ---->
+                        
+                        <span class="relative z-10">Quero me inscrever na Jornada!</span>
+
+                        <!-- Brilho animado -->
+                        <span class="absolute top-0 left-[-150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/60 to-transparent skew-x-[-20deg] animate-shine"></span>
+                    </a> 
+
+                </div> 
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos (Prova Social) --> 
+        <!-- Depoimentos (Prova Social) --> 
+    <section class="py-20 bg-white section-divider">
+        <div class="container mx-auto px-6 md:px-12 max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Resultados Reais</h2>
+                <p class="text-xl text-primary max-w-2xl mx-auto">Veja o que minhas alunas já conquistaram</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+                <!-- Depoimento 1 - Sabrina De Bello -->
+                <div class="bg-white p-6 rounded-xl border border-accentLight fade-up-blur">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accentLight/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-primary font-semibold">S</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-neutralDark">Sabrina De Bello</h3>
+                            <div class="flex text-amber-500">
+                                <!-- 5 estrelas -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-primary italic">
+                        "Excelente, maravilhoso, transformador! Obrigada por todo seu carinho e dedicação! Vou imprimir os 'passos' pra colocar na mesa do meu consultório."
+                    </p>
+                </div>
+                
+                <!-- Depoimento 2 - Marise De Schepper -->
+                <div class="bg-white p-6 rounded-xl border border-accentLight fade-up-blur">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accentLight/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-primary font-semibold">M</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-neutralDark">Marise De Schepper</h3>
+                            <div class="flex text-amber-500">
+                                <!-- 5 estrelas -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-primary italic">
+                        "Amo sempre suas orientações, sigo você há muito tempo! Adoro ouvir suas mensagens, elevam a autoestima. Obrigada por tudo!"
+                    </p>
+                </div>
+                
+                <!-- Depoimento 3 - Regiane Canceller -->
+                <div class="bg-white p-6 rounded-xl border border-accentLight fade-up-blur">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accentLight/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-primary font-semibold">R</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-neutralDark">Regiane Canceller</h3>
+                            <div class="flex text-amber-500">
+                                <!-- 5 estrelas -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-primary italic">
+                        "Foi show... obrigada por estar sempre inovando e nos ajudando... gratidão! Suas orientações me ajudam muito!"
+                    </p>
+                </div>
+
+                <!-- Depoimento 4 - Luciana Cavalcante -->
+                <div class="bg-white p-6 rounded-xl border border-accentLight fade-up-blur">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accentLight/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-primary font-semibold">L</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-neutralDark">Luciana Cavalcante</h3>
+                            <div class="flex text-amber-500">
+                                <!-- 5 estrelas -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-primary italic">
+                        "Fiz atividade física pela primeira vez com motivação! Frase que marcou: 'ANTES FEITO DO QUE PERFEITO'. Comprei ingresso para show sozinha - reconectando com minha alegria!"
+                    </p>
+                </div>
+
+                <!-- Depoimento 5 - Roberta Toscan -->
+                <div class="bg-white p-6 rounded-xl border border-accentLight fade-up-blur">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accentLight/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-primary font-semibold">R</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-neutralDark">Roberta Toscan</h3>
+                            <div class="flex text-amber-500">
+                                <!-- 5 estrelas -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-primary italic">
+                        "Percebi que minha casa já não está tão bagunçada! Minha folga e dia de faxina vai ser mais tranquilo. Resultados práticos no dia a dia!"
+                    </p>
+                </div>
+
+                <!-- Depoimento 6 - Elizandra Deves -->
+                <div class="bg-white p-6 rounded-xl border border-accentLight fade-up-blur">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-accentLight/30 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-primary font-semibold">E</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-neutralDark">Elizandra Deves</h3>
+                            <div class="flex text-amber-500">
+                                <!-- 5 estrelas -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-primary italic">
+                        "Obrigada Mãe Dani! Tens minha admiração de pessoa e profissional. Como é bom ter por perto pessoas como você, que amplificam seus conhecimentos para dar uma força ao próximo."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos e Valores CTA 1 -->
+    <section id="planos" class="py-20 bg-neutralLight section-divider">
+        <div class="container mx-auto px-6 md:px-12 max-w-5xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Invista no Seu Desenvolvimento</h2>
+                <p class="text-xl text-primary max-w-2xl mx-auto">Escolha o plano que melhor se adapta à sua jornada de transformação</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Plano 1 - Jornada Completa -->
+                <div class="bg-white rounded-2xl shadow-lg border border-accentLight overflow-hidden flex flex-col h-full fade-up-blur">
+                    <!-- Header -->
+                    <div class="bg-primary text-white py-6 px-8 text-center">
+                        <h3 class="text-2xl font-bold">Jornada Completa</h3>
+                        <p class="  mt-2">Transformação profunda em 5 meses</p>
+                    </div>
+
+                    <!-- Conteúdo do card -->
+                    <div class="p-8 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="text-center mb-8">
+                                <span class="text-4xl font-bold text-neutralDark">R$ 597</span>
+                                <span class="text-primary block mt-2">à vista ou em até 12x</span>
+                                <div class="mt-4 inline-block bg-secondary/20 text-secondary text-sm font-medium px-3 py-1 rounded-full">
+                                    Economize R$ 388
+                                </div>
+                            </div>
+
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-3 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    <div>
+                                    <div>
+                                        <span class="font-medium text-neutralDark">5 meses de acompanhamento</span>
+                                        <p class="text-primary text-sm mt-1">100 áudios exclusivos + Material complementar</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-3 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    <div>
+                                        <span class="font-medium text-neutralDark">Grupo de apoio exclusivo</span>
+                                        <p class="text-primary text-sm mt-1">Comunidade no WhatsApp para troca de experiências</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-3 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                    </svg>
+                                    <div>
+                                        <span class="font-medium text-neutralDark">Bônus exclusivo</span>
+                                        <p class="text-primary text-sm mt-1">Lives de acompanhamento ao longo dos 10 dias</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="https://pay.hotmart.com/D77689968B?bid=1759240605955" class="block w-full bg-secondary hover:bg-accent text-white font-semibold py-4 px-4 rounded-lg text-center transition duration-300 relative overflow-hidden">
+                             <span class="relative z-10">Quero a Jornada Completa</span>
+                        <!-- Brilho animado -->
+                        <span class="absolute top-0 left-[-150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/60 to-transparent skew-x-[-20deg] animate-shine"></span>
+                        </a>
+                    </div>
+                </div>
+
+                
+                <!-- Plano 2 - Acesso Mensal -->
+                <!-- Card -->
+                <div class="bg-white rounded-2xl shadow-sm border border-accentLight overflow-hidden flex flex-col h-full fade-up-blur">
+                    <!-- Header -->
+                    <div class="bg-accentLight py-6 px-8 text-center">
+                        <h3 class="text-2xl font-bold text-white">Acesso Mensal</h3>
+                        <p class=" text-white mt-2">Experimente por 1 mês</p>
+                    </div>
+
+                    <!-- Conteúdo do card -->
+                    <div class="p-8 flex flex-col flex-grow justify-between">
+                        <div class="text-center mb-8">
+                            <span class="text-4xl font-bold text-neutralDark">R$ 197</span>
+                            <span class="text-primary block mt-2">por mês</span>
+                                <div class="mt-4 inline-block bg-secondary/0 text-secondary/0 text-sm font-medium px-3 py-1 rounded-full">
+                                       
+                                </div>
+                        </div>
+                         
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-3 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <div>
+                                    <span class="font-medium text-neutralDark">1 mês de acompanhamento</span>
+                                    <p class="text-primary text-sm mt-1">20 áudios exclusivos + Material complementar</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-3 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <div>
+                                    <span class="font-medium text-neutralDark">Acesso ao grupo de apoio</span>
+                                    <p class="text-primary text-sm mt-1">Comunidade no WhatsApp durante o mês contratado</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-secondary mr-3 mt-0.5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                <div>
+                                    <span class="font-medium text-neutralDark">Flexibilidade</span>
+                                    <p class="text-primary text-sm mt-1">Renovação mensal conforme sua necessidade</p>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                        
+                        <a href="https://pay.hotmart.com/T71938234T?bid=1759152584636" class="block w-full bg-accentLight hover:bg-accentLight/80 text-white font-semibold py-4 px-4 rounded-lg text-center transition duration-300">
+                            <span>Experimentar por 1 mês</span> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-2xl mx-auto mt-12 text-center">
+                <p class="text-lg text-primary italic">
+                    "Quando você escolhe a Jornada completa, você se presenteia com um compromisso profundo consigo mesma — e ainda recebe um desconto especial."
+                </p>
+            </div>
+        </div>
+    </section> 
+
+        <!-- Psicóloga & Garantia -->
+    <section class="py-20 bg-white" id="garantia">
+        <div class="container mx-auto px-6 md:px-12 max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Imagem da Psicóloga -->
+                <div class="order-2 lg:order-1">
+                    <div class="relative">
+                        <!-- Imagem principal -->
+                        <div class="bg-neutralLight rounded-2xl overflow-hidden border-2 border-accentLight">
+                            <img 
+                                src="src/img/imgdanisorrindo.jpg" 
+                                alt="Dani Adami - Psicóloga clínica e Neuropsicóloga especialista em emagrecimento feminino"
+                                class="w-full h-auto object-cover"
+                            >
+                        </div>
+                         
+                        <!-- Elemento decorativo com shine automático -->
+                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-secondary rounded-full flex items-center justify-center border-4 border-white shine-container auto-shine">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                            
+                            <!-- Brilho animado automático -->
+                            <span class="shine-effect"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Legenda da imagem -->
+                    <div class="mt-8 text-center lg:text-left fade-up-blur">
+                        <h3 class="text-xl font-bold text-neutralDark mb-2">Dani Adami</h3>
+                        <p class="text-primary">Psicóloga e Neuropsicóloga Especialista em Emagrecimento Feminino</p>
+                        <p class="text-accent text-sm mt-1"> <p> +40 mil alunas transformaram suas vidas através da disciplina</p>
+                    </div>
+                </div>
+
+                <!-- Garantia -->
+                <div class="order-1 lg:order-2 fade-up-blur">
+                    <div class="bg-neutralLight p-8 md:p-10 rounded-2xl border border-accentLight h-full justify-between flex flex-col">
+                        <div>
+                            <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">Garantia Incondicional de 7 Dias</h2>
+                        </div>
+                        <p class="text-lg text-primary my-20 text-center">
+                            Você tem 7 dias para experimentar a Jornada da Disciplina. Se por qualquer motivo sentir que não é para você, pode solicitar o reembolso integral sem questionamentos.
+                        </p>
+                        <div>
+                            <p class="text-xl font-semibold text-neutralDark text-center">
+                                Quero que você esteja aqui por amor ao processo, não por obrigação.
+                            </p>
+                            <!-- Selo de garantia -->
+                            <div class="mt-8 flex justify-center">
+                                <div class="bg-white py-3 px-6 rounded-full border-2 border-secondary/30">
+                                    <p class="text-secondary font-bold text-sm">✓ GARANTIA 100% SEGURA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chamada Final (CTA) -->
+    <section class="py-20 bg-primary text-white ">
+        <div class="container mx-auto px-6 md:px-12 max-w-4xl text-center fade-up-blur">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6 ">
+                Essa é a sua oportunidade de treinar o músculo da disciplina e nunca mais desistir de si mesma
+            </h2>
+            <p class="text-xl text-white/70  mb-8 max-w-2xl mx-auto">
+                Essa é a sua oportunidade de destravar seu emocional, assumir o protagonismo da sua vida, desenvolver a habilidade de criar e seguir suas regras e construir a força de continuar acreditando em ti.
+            </p>
+            <a href="https://pay.hotmart.com/D77689968B" class="inline-block bg-secondary hover:bg-accent text-white font-bold py-4 px-8 rounded-lg transition duration-300 text-lg relative overflow-hidden">
+                <span class="relative z-10">Quero garantir minha vaga agora</span>
+
+                <!-- Brilho animado -->
+                <span class="absolute top-0 left-[-150%] w-[150%] h-full bg-gradient-to-r from-transparent via-white/60 to-transparent skew-x-[-20deg] animate-shine"></span>
+            </a> 
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="py-12 bg-secondary text-white">
+        <div class="container mx-auto px-6 md:px-12 max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Contato</h3>
+                    <ul class="space-y-3 text-white/70">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                            <span>Daniadamipsicologa@gmail.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            <span>  ​(54) 99968-6048</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Sobre a Psicóloga</h3>
+                    <p class="text-white/70 ">
+                        Sou Dani Adami, psicóloga há mais de duas décadas, e ao longo dessa caminhada descobri que minha maior paixão é estar ao lado de mulheres que desejam parar de recomeçar e aprender a insistir em si mesmas. Acredito que disciplina não é peso, mas liberdade; não é rigidez, mas amor próprio. É nesse encontro entre mente e corpo que ajudo cada mulher a transformar a rotina em realização e a vida em uma história mais plena e feliz.                    
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Legal</h3>
+                    <ul class="space-y-2 text-white/70">
+                        <li><a href="#" class="hover:text-accentLight transition duration-300">Termos de Uso</a></li>
+                        <li><a href="#" class="hover:text-accentLight transition duration-300">Política de Privacidade</a></li>
+                        <li><a href="#garantia" class="hover:text-accentLight transition duration-300">Política de Reembolso</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-accentLight/30 text-center text-white/70">
+                <p>&copy; 2025 Jornada da Disciplina. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // ===== ANIMAÇÃO FADE-UP-BLUR COM INTERSECTION OBSERVER =====
+    const elements = document.querySelectorAll(".fade-up-blur, .animate-bouncing-svg");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target); // anima só 1 vez
+            }
+        });
+    }, { threshold: 0.1 }); // 10% visível já dispara
+
+    elements.forEach(el => observer.observe(el));
+
+    // ===== SCROLL SUAVE PARA LINKS ÂNCORA =====
+    function smoothScroll(targetId) {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const duration = 1000; // 1 segundo
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animation);
+            }
+
+            // Função de easing para suavidade
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+    }
+
+    // Adiciona event listeners para todos os links âncora
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            
+            if (targetId !== '#') {
+                smoothScroll(targetId);
+                
+                // Atualiza a URL sem recarregar a página
+                history.pushState(null, null, targetId);
+            }
+        });
+    });
+
+    // Mantém o CSS para navegadores que suportam
+    document.documentElement.style.scrollBehavior = 'smooth';
+
+    // Fallback para navegadores mais antigos
+    if (!('scrollBehavior' in document.documentElement.style)) {
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js';
+        script.integrity = 'sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=';
+        script.crossOrigin = 'anonymous';
+        document.head.appendChild(script);
+    }
+});
+    </script>
+</body>
+</html>
